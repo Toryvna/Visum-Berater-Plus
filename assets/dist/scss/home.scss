@@ -1,0 +1,49 @@
+@import "libs/flexbox";
+@import "libs/swiper";
+
+.banner{
+    padding: 75px 0;
+    background-image: url('../img/banner-mobile.png');
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    .wrapper{
+        padding: 50px 10px;
+        margin: 0 -10px;
+        background-color: rgba(255,255,255,0.83);
+    }
+    &__slider{
+        .swiper-slide{
+            text-align: center;
+        }
+        .content{
+            display: inline-block;
+        }
+        h3{
+            color: #1a1a1a;
+            font-size: 24px;    
+            margin-bottom: 5px;    
+            text-align: left;  
+        }
+        p{
+            color: #1a1a1a;
+            font-family: "Roboto-Black";
+            font-size: 26px;
+            text-align: left;  
+        }
+        .sw-button-next,
+        .sw-button-prev{
+            font-size: 30px;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .sw-button-next{
+            right: 10px;
+        }
+        .sw-button-prev{
+            left: 10px;
+        }
+    }
+}

@@ -1,4 +1,7 @@
+@import "libs/fonts";
 @import "libs/header";
+@import "libs/footer";
+@import "libs/fontello";
 
 *{
   margin: 0;
@@ -6,7 +9,7 @@
   list-style: none;
   outline: none;
   text-decoration: none;
-  font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto-Regular';
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -53,10 +56,10 @@ ul li,ol li{
 
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1260px) {
 
   .container{
-    width: 1078px;
+    width: 1240px;
     padding: 0;
   }
 
