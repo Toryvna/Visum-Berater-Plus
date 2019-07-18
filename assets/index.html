@@ -13,7 +13,10 @@
 <!-- build:section layout.header-->
 <!-- /build -->
 
-<div class="banner">
+<section class="banner" style="background-image: url('../img/banner-1.png')">
+    <img src="../img/banner-1.png" alt="" class="bgImg-1 bgImg">
+    <img src="../img/banner-2.png" alt="" class="bgImg-2 bgImg">
+    <img src="../img/banner-3.png" alt="" class="bgImg-3 bgImg">
     <div class="container">
         <div class="wrapper">
             <div class="banner__slider swiper-container">
@@ -50,12 +53,351 @@
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="search">
+    <div class="container">
+        <div class="search__form">
+            <div class="tab-item tab-item1 active">
+                <div class="heading">
+                    <p><i class="icon-passport-2"></i> Приглашения</p>
+                </div>
+                <div class="content">
+                    <form>
+                        <div class="flex-wrap">
+                            <div class="form-select">
+                                <select
+                                    data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <option>В какую страну</option>
+                                    <option>Россия</option>
+                                    <option>Германия</option>
+                                    <option>Польша</option>
+                                </select>
+                            </div>
+                            <div class="form-select">
+                                <select
+                                    data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <option>Тип визы</option>
+                                    <option>визa 1</option>
+                                    <option>визa 2</option>
+                                    <option>визa 3</option>
+                                </select>
+                            </div>
+                            <div class="form-button">
+                                <!-- <button class="btn"><i class="icon-arrow-down"></i></button> -->
+                                <a href="javascript:void(0)" class="btn"><i class="icon-arrow-down"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-item tab-item2">
+                <div class="heading">
+                    <p><i class="icon-health"></i> Мед. страховка</p>
+                </div>
+                <div class="content">
+                    <p>На данный момент эта категория недоступна. Мы работаем над этим и совсем скоро у вас будет больше возможностей!</p>
+                </div>
+            </div>
+            <div class="tab-item tab-item3">
+                <div class="heading">
+                    <p><i class="icon-plane"></i> Перелеты</p>
+                </div>
+                <div class="content">
+                    <p>На данный момент эта категория недоступна. Мы работаем над этим и совсем скоро у вас будет больше возможностей!</p>
+                </div>
+            </div>
+            <div class="tab-item tab-item4">
+                <div class="heading">
+                    <p><i class="icon-hotel"></i> Отели</p>
+                </div>
+                <div class="content">
+                    <p>На данный момент эта категория недоступна. Мы работаем над этим и совсем скоро у вас будет больше возможностей!</p>
+                </div>
+            </div>
+            <div class="tab-item tab-item5">
+                <div class="heading">
+                    <p><i class="icon-car"></i> Прокат авто</p>
+                </div>
+                <div class="content">
+                    <p>На данный момент эта категория недоступна. Мы работаем над этим и совсем скоро у вас будет больше возможностей!</p>
+                </div>
+            </div>
+            <div class="tab-item tab-item6">
+                <div class="heading">
+                    <p><i class="icon-other-services"></i>Другие услуги</p>
+                </div>
+                <div class="content">
+                    <p>На данный момент эта категория недоступна. Мы работаем над этим и совсем скоро у вас будет больше возможностей!</p>
+                </div>
+            </div>
+
+            <div class="top__tabs">
+                <div data-tab="tab-item1" class="filter-items active">
+                    <p><i class="icon-passport-2"></i> <span>Приглашения</span></p>
+                </div>
+                <div class="slider_tabs swiper-container">
+                    <div class="swiper-wrapper">
+                        <div data-tab="tab-item2" class="swiper-slide filter-items">
+                            <p><i class="icon-health"></i> <span>Мед. страховка</span></p>
+                        </div>
+                        <div data-tab="tab-item3" class="swiper-slide filter-items">
+                            <p><i class="icon-plane"></i> <span>Перелеты</span></p>
+                        </div>
+                        <div data-tab="tab-item4" class="swiper-slide filter-items">
+                            <p><i class="icon-hotel"></i> <span>Отели</span></p>
+                        </div>
+                        <div data-tab="tab-item5" class="swiper-slide filter-items desk">
+                            <p><i class="icon-car"></i> <span>Прокат авто</span></p>
+                        </div>
+                        <div data-tab="tab-item6" class="swiper-slide filter-items desk">
+                            <p><i class="icon-other-services"></i> <span>Другие услуги</span></p>
+                        </div>
+                    </div>
+                    <div class="sw-button-next">
+                        <img src="../img/arrows-icon.png" alt="more">
+                    </div>
+                    <div class="sw-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits">
+    <div class="container">
+        <div class="benefits__top">
+            <div class="item">
+                <div class="item-icon">
+                    <span class="num">1</span>
+                    <i class="icon-1-stage"></i>
+                </div>
+                <p> Расчет стоимости</p>
+            </div>
+            <div class="item">
+                <div class="item-icon">
+                    <span class="num">2</span>
+                    <i class="icon-2-stage"></i>
+                </div>
+                <p>Подготовка документов</p>
+            </div>
+            <div class="item">
+                <div class="item-icon">
+                    <span class="num">3</span>
+                    <i class="icon-3-stage"></i>
+                </div>
+                <p>Оплата визы</p>
+            </div>
+        </div>
+        <div class="benefits__lists">
+            <ul>
+                <li>
+                    <p>Закодированная передача Ваших данных!  </p>
+                </li>  
+                <li>
+                    <p>Защищенные способы оплаты!   </p>
+                </li>
+                <li>
+                    <p>Никаких скрытых платежей!</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <p>Безопасная пересылка до почтового отделения  </p>
+                </li>
+                <li>
+                    <p>Отправка документов с куръером!</p>
+                </li>
+                <li>
+                    <p>Заполнение документов</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <p>Безопасная пересылка
+                            до почтового отделения  </p>
+                </li>
+                <li>
+                    <p>Отправка документов с куръером!</p>
+                </li>
+                <li>
+                    <p>Заполнение документов</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <p>Виза в Россию за 3 шага,
+                            всего 79 € </p>
+                </li>
+                <li>
+                    <p>Приглашение всего за 9.90 €</p>
+                </li>
+                <li>
+                    <p>Медстрагование поездки за 14.90 €</p>
+                </li>
+            </ul>
+        </div>
+        <div class="benefits__articles">
+            <a href="javascript:void(0)" class="item" style="background-image:url('../img/aricle1.png');">
+                <p>Выгодные предложения по отелям в России</p>
+            </daiv>
+            <a href="javascript:void(0)" class="item" style="background-image:url('../img/aricle2.png');">
+                <p>Приглашение для туристической визы</p>
+            </a>
+            <a href="javascript:void(0)" class="item" style="background-image:url('../img/aricle3.png');">
+                <p>Приглашение для бизнес визы</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="visas">
+    <div class="container">
+        <h2>Возможные варианты виз</h2>
+        <div class="flex-wrap">
+            <div class="item">
+                <div class="heading">
+                    <i class="icon-report2"></i>
+                    <h3> Рабочая виза в Россию</h3>
+                </div>
+                <p>Здесь вы найдете всю важную информацию и формы для подачи заявления на рабочую визу в Россию</p>
+            </div>
+            <div class="item">
+                <div class="heading">
+                    <i class="icon-product"></i>
+                    <h3> Гуманитарная виза в Россию</h3>
+                </div>
+                <p>Здесь вы найдете всю важную информацию и формы для подачи заявления на гуманитарную визу в Россию</p>
+            </div>
+            <div class="item">
+                <div class="heading">
+                    <i class="icon-camera"></i>
+                    <h3> Туристическая виза в Россию</h3>
+                </div>
+                <p>Здесь вы найдете всю важную информацию и формы для подачи заявления на транзитную визу в Россию</p>
+            </div>
+            <div class="item">
+                <div class="heading">
+                    <i class="icon-passport-2"></i>
+                    <h3>Частная виза в Россию</h3>
+                </div>
+                <p>Здесь вы найдете всю важную информацию и формы для подачи заявления на гуманитарную визу в Россию</p>
+            </div>
+            <div class="item">
+                <div class="heading">
+                    <i class="icon-loop"></i>
+                    <h3>Транзитная виза в Россию</h3>
+                </div>
+                <p>Здесь вы найдете всю важную информацию и формы для подачи заявления на транзитную визу в Россию</p>
+            </div>
+            <div class="item">
+                <div class="heading">
+                    <i class="icon-briefcase"></i>
+                    <h3>Деловая виза в Россию</h3>
+                </div>
+                <p>Здесь вы найдете всю важную информацию и формы для подачи заявления на транзитную визу в Россию</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="whatGet">
+    <img src="../img/passImg.jpg" alt="" class="leftImg">
+    <div class="container">
+        <div class="content">
+            <h2>Ваши преимущества, если вы подаете заявление 
+                    на получение российской визы у нас:</h2>
+            <div class="flex-wrap">
+                <div class="item-block">
+                    <h3>Никаких скрытых затрат:</h3>
+                    <ul>
+                        <li>
+                            <p>Прозрачный расчет цены.</p>
+                            <p>Все сборы указаны отдельно.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-block">
+                    <h3>Упрощение процесса подачи заявки:</h3>
+                    <ul>
+                        <li>
+                            <p>Оформление визы только в 3 
+                            этапа.  Минимальное время 
+                            обработки!</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-block">
+                    <h3>Зашифрованная передача данных:</h3>
+                    <ul>
+                        <li>
+                            <p>Ваши данные защищены от доступа третьих лиц.</p>
+                        </li>
+                        <li>
+                            <p>Конфиденциальность и безопасность документов являются нашим высшим приоритетом.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-block">
+                    <h3>Индивидуальный пакет услуг:</h3>
+                    <ul>
+                        <li>
+                            <p>Помощь по заполнению анкеты.</p>
+                        </li>
+                        <li>
+                            <p>Приглашение для туристов и деловых путешественников.</p>
+                        </li>
+                        <li>
+                            <p>Страхование путешествий.</p>
+                        </li>
+                        <li>
+                            <p>Курьерская служба.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-block">
+                    <h3>Безопасные способы оплаты:</h3>
+                    <ul>
+                        <li>
+                            <p>Предоплата, PayPal, перевод  денег 
+                            в online- режиме, а также оплата 
+                            по счету (для компаний)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-block">
+                    <h3>Аккредитация:</h3>
+                    <ul>
+                        <li>
+                            <p>VisumBerater+  аккредитован 
+                            Российским Консульством в 
+                            качестве поставщика визовых
+                            услуг.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-block">
+                    <h3>Статус заказа:</h3>
+                    <ul>
+                        <li>
+                            <p>Вы можете легко проверить статус 
+                            вашего текущего заказа онлайн.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h4> С нашей помощью вы  экономите  время, деньги и нервы при оформлении визы!</h4>
+        </div>
+    </div>
+</section>
+
 
 <!-- build:section layout.footer-->
 <!-- /build -->
 
 <script src="../js/jquery.min.js"></script>
+<script src="../js/jcf.min.js"></script>
+<script src="../js/jcf.select.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script src="../js/script.min.js"></script>
 <script src="../js/home.min.js"></script>

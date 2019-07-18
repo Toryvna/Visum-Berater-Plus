@@ -22,6 +22,9 @@ grunt.initConfig({
 			files: {
 				'../markup/js/jquery.min.js': ['dist/js/plugin/jquery.js'],
 				'../markup/js/swiper.min.js': ['dist/js/plugin/swiper.js'],
+				'../markup/js/jcf.min.js': ['dist/js/plugin/jcf.js'],
+				'../markup/js/jcf.select.min.js': ['dist/js/plugin/jcf.select.js'],
+				
 				'../markup/js/script.min.js': ['dist/js/script.js'],
 				'../markup/js/home.min.js': ['dist/js/home.js']
 			}
