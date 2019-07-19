@@ -1,0 +1,274 @@
+@import "flexbox";
+.overlayPopup{
+    display: none;
+    &.active {
+      display: block;
+    }
+    .close-popup{
+        top: 0;
+        right: 19px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        width: 21px;
+        height: 21px;
+        &::before,
+        &::after {
+            content: "";
+            top: 9px;
+            left: 0;
+            width: 21px;
+            height: 2px;
+            position: absolute;
+            background: #022222;
+        }
+        &::before{
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        &::after {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    .contacts__popup{
+        top: 70px;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        position: fixed;
+        padding: 46px 0 80px;
+        background-color: #ffffff;
+        box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
+        .wrapper{
+            @include flexbox;
+            @include justify-content(space-between);
+            .block{
+                width: calc(30% - 40px);
+                &:last-of-type{
+                    width: calc(40% - 20px);
+                    padding-right: 40px;
+                }
+            }
+        }
+        p,a{
+            color: #022222;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .item{
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 30px;
+            &::before{
+                font-family: 'fontello';
+                color: #f76f0d;
+                font-size: 20px;
+                position: absolute;
+                top: 2px;
+                left: 0;
+            }
+            h3{
+                color: #022222;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: "Roboto-Medium";
+                margin-bottom: 10px;
+            }
+            &.workTime{
+                &::before{
+                    content: '\e808';
+                }
+            }
+            &.phones{
+                &::before{
+                    content: '\e819';
+                }
+            }
+            &.wAp{
+                margin-bottom: 15px;
+                &::before{
+                    content: '\e821';
+                    color: #2cb742;
+                }
+            }
+            &.email{
+                &::before{
+                    content: '\e817';
+                }
+            }
+            &.map{
+                &::before{
+                    content: '\e809';
+                }
+            }
+        }
+        h4{
+            color: #022222;
+            font-family: 'Roboto-Medium';
+            font-size: 18px;
+            line-height: 24px;
+            border-left: 3px solid #f76f0d;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        .getVisas{
+            border-radius: 7px;
+            background-color: #f76f0d;
+            color: #ffffff;
+            font-family: 'Roboto-Bold';
+            font-size: 18px;
+            display: inline-block;
+            padding: 12px 28px;
+            margin-top: 25px;
+            &:hover{
+                box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
+            }
+        }
+    }
+    .visas_instructions__popup{
+        top: 70px;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        position: fixed;
+        padding: 46px 0 80px;
+        background-color: #ffffff;
+        box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
+        h3{
+            color: #1a1746;
+            font-family: 'Roboto-Medium';
+            font-size: 24px;
+            line-height: 36px;
+        }
+        .wrapper{
+            @include flexbox;
+            @include justify-content(space-between);
+            margin-top: 50px;
+            .item{
+                &::after{
+                    bottom: inherit;
+                    top: 85px;
+                    left: inherit;
+                    right: -25px;
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+            }
+            .item{
+                position: relative;
+                width: calc(100% / 3 - 70px);
+                &::before{
+                    content: '';
+                    width: 1px;
+                    height: 342px;
+                    background-color: #1a1746;
+                    opacity: 0.08;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -50px;
+                }
+                &:last-of-type{
+                    margin-bottom: 0;
+                    &::after,
+                    &::before{
+                        display: none;
+                    }
+                }
+                &::after{
+                    content: '';
+                    background-image: url('../img/arrows-icon.png');
+                    background-size: cover;
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 45px;
+                    right: -25px;
+                }
+                &-icon{
+                    border: 1px solid #adaeb5;
+                    width: 123px;
+                    height: 122px;
+                    border-radius: 50%;
+                    position: relative;
+                    display: block;
+                    margin: 0 auto 25px;
+                    i{
+                        color: #f97c27;
+                        font-size: 55px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    .num{
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        background-color: #b4b8ca;
+                        position: absolute;
+                        line-height: 24px;
+                        text-align: center;
+                        color: #ffffff;
+                        font-family: 'Roboto-Light';
+                        font-size: 15px;
+                        border-radius: 50%;
+                        top: 12px;
+                        left: 0;
+                    }
+                }
+                h4{
+                    color: #1a1746;
+                    font-size: 18px;
+                    font-family: 'Roboto-Bold';
+                }
+                ul{
+                    margin-top: 25px;
+                    li{
+                        position: relative;
+                        padding-left: 20px;
+                        margin-bottom: 18px;
+                        p{
+                            color: #474747;
+                            font-size: 16px;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            height: 5px;
+                            width: 5px;
+                            background-color: #f46c09;
+                            border-radius: 50%;
+                            left: 0;
+                            top: 7px;
+                        }
+                    }
+                }
+            }
+        }
+        .getVisas{
+            text-align: center;
+            a{
+                border-radius: 7px;
+                background-color: #f76f0d;
+                color: #ffffff;
+                font-family: 'Roboto-Bold';
+                font-size: 18px;
+                display: inline-block;
+                padding: 12px 28px;
+                margin-top: 25px;
+                &:hover{
+                    box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
+                }
+            }
+        }
+    }
+}

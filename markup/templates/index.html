@@ -12,6 +12,142 @@
 
 <body>
 
+    <!-- popups -->
+    <!-- .closeBtn - закрывает попап -->
+    <!-- .open-* - открывает попап -->
+
+    <div class="overlay-visas_instructions overlayPopup">
+        <div class="close"></div>
+        <div class="visas_instructions__popup">
+            <div class="content">
+                <div class="container">
+                    <span class="close-popup closeBtn"></span>
+                    <h3>Пошаговая инструкция 
+                    для получения визы в Россию  
+                    •  VisumBerater+</h3>
+
+                    <div class="wrapper">
+                        <div class="item">
+                            <div class="item-icon">
+                                <span class="num">1</span>
+                                <i class="icon-1-stage"></i>
+                            </div>
+                            <h4> На нашем сайте нет никаких 
+                            скрытых платежей и сборов!</h4>
+                            <ul>
+                                <li>
+                                    <p>Выберите вид визы</p>
+                                </li>
+                                <li>
+                                    <p>Определите стоимость ее оформления путем выбора необходимых вам услуг и времени обработки
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Вы оплачиваете только те услуги, которые вы выбрали</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-icon">
+                                <span class="num">2</span>
+                                <i class="icon-2-stage"></i>
+                            </div>
+                            <h4>С нами вы можете забыть 
+                            про бумажные формы 
+                            для заполнения вручную!</h4>
+                            <ul>
+                                <li>
+                                    <p>Заполните визовую анкету</p>
+                                </li>
+                                <li>
+                                    <p>Подготовьте необходимые документы
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Воспользуйтесь нашими услугами по заполнению анкеты: Помощь- Анкета
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-icon">
+                                <span class="num">3</span>
+                                <i class="icon-3-stage"></i>
+                            </div>
+                            <h4>Моментальная и безопасная 
+                            оплата за оформление визы!</h4>
+                            <ul>
+                                <li>
+                                    <p>Оплатите вашу визу</p>
+                                </li>
+                                <li>
+                                    <p>Вышлите ваши документы по почте или Вы можете занести Ваши документы к нам в бюро </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="getVisas">
+                        <a href="javascript:void(0)">Подать заявление на визу</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay-contacts overlayPopup">
+        <div class="close"></div>
+        <div class="contacts__popup">
+            <div class="content">
+                <div class="container">
+                    <span class="close-popup closeBtn"></span>
+                    <div class="wrapper">
+                        <div class="block">
+                            <div class="item workTime">
+                                <h3>Наши часы работы: </h3>
+                                <p>Понедельник - пятница: с 9:00 до 19:00</p>
+                                <p>Суббота: с 11:00 до 15:00</p>
+                            </div>
+                            <div class="item phones">
+                                <h3>Телефоны:</h3>
+                                <p><a href="tel:+49 (0)30 2 555 9861">+49 (0)30 2 555 9861</a></p>
+                                <p><a href="tel:+49 (0)176 78 30 11 10">+49 (0)176 78 30 11 10</a></p>
+                            </div>
+                            <div class="item wAp">
+                                <p><a href="https://wa.me/493025559861">https://wa.me/493025559861</a></p>
+                            </div>
+                            <div class="item email">
+                                <a href="mailto:kontakt@visumberater.d">kontakt@visumberater.d</a>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="item map">
+                                <h3>Ваши документы высылайте 
+                                по следующему адресу:</h3>
+                                <p>VisumBerater Plus UG</p>
+                                <p>Postfach 2 99 69</p>
+                                <p>10132 Berlin</p>
+                            </div>
+                            <div class="item map">
+                                <h3>Ваши документы высылайте 
+                                по следующему адресу:</h3>
+                                <p>VisumBerater Plus UG</p>
+                                <p>Weydingerstraße 22</p>
+                                <p>10178 Berlin</p>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <h4>У вас есть вопросы? Свяжитесь 
+                            с нами и мы охотно вас 
+                            проконсультируем.</h4>
+                            <p>Оформить туристическую, деловую или частную визу для поездки в Россию совсем не сложно, если вы обратитесь к нам!</p>
+                            <a href="javascript:void(0)" class="getVisas">Заказать визу</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="header">
         <div class="container">
             <div class="header__wrap">
@@ -30,8 +166,8 @@
                     <div class="closeMenu"></div>
                     <nav>
                         <ul>
-                            <li>
-                                <a href="javascript:void(0)">Виза в Россию в 3 шага</a>
+                            <li class="open-visas_instructions__popup popupLnk">
+                                <a href="visa-instructions.html">Виза в Россию в 3 шага</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)">Виды виз и условия въезда 
@@ -43,8 +179,8 @@
                             <li>
                                 <a href="javascript:void(0)">Цены</a>
                             </li>
-                            <li>
-                                <a href="javascript:void(0)">Контакты</a>
+                            <li class="open-contacts__popup popupLnk">
+                                <a href="contacts.html">Контакты</a>
                             </li>
                         </ul>
                     </nav>

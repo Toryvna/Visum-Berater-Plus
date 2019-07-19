@@ -15,6 +15,27 @@ $(document).ready(function(){
     });
     //end mobile menu
 
+    //popups
+    $('.open-visas_instructions__popup').on("click",function(e){
+        if($(window).width() > 1024) {
+            e.preventDefault();
+            $('.overlay-visas_instructions').addClass('active');
+        }
+    });
+    $('.overlay-visas_instructions .closeBtn').on("click",function(){
+        $('.overlay-visas_instructions').removeClass('active');
+    });
+
+    $('.open-contacts__popup').on("click",function(e){
+        if($(window).width() > 1024) {
+            e.preventDefault();
+            $('.overlay-contacts').addClass('active');
+        }
+    });
+    $('.overlay-contacts .closeBtn').on("click",function(){
+        $('.overlay-contacts').removeClass('active');
+    });
+
 
 });
 

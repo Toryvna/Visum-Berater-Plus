@@ -26,7 +26,9 @@ grunt.initConfig({
 				'../markup/js/jcf.select.min.js': ['dist/js/plugin/jcf.select.js'],
 				
 				'../markup/js/script.min.js': ['dist/js/script.js'],
-				'../markup/js/home.min.js': ['dist/js/home.js']
+				'../markup/js/home.min.js': ['dist/js/home.js'],
+				'../markup/js/types-of-visas.min.js': ['dist/js/types-of-visas.js'],
+				
 			}
 		}
 	},
@@ -87,7 +89,9 @@ grunt.initConfig({
                     templates: '<%= fixturesPath %>/*.html',
                     layout: {
 						header: '<%= fixturesPath %>/templates/header.html',
-                    	footer: '<%= fixturesPath %>/templates/footer.html'
+                    	footer: '<%= fixturesPath %>/templates/footer.html',
+						popups: '<%= fixturesPath %>/templates/popups.html'
+						
 					}
                 },
             }

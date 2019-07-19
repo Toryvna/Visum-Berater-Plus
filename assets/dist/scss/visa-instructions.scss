@@ -1,0 +1,133 @@
+@import "libs/flexbox";
+
+.info{
+    margin-top: 80px;
+    padding: 50px 0;
+    h3{
+        color: #1a1746;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .wrapper{
+        .item{
+            position: relative;
+            margin: 0 auto 85px;
+            padding-top: 40px;
+            &:last-of-type{
+                margin-bottom: 0;
+                &::after{
+                    display: none;
+                }
+            }
+            &::after{
+                content: '';
+                background-image: url('../img/arrows-icon.png');
+                background-size: cover;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: calc(50% - 15px);
+                bottom: -70px;
+                -webkit-transform: rotate(90deg);  
+                    -ms-transform: rotate(90deg);  
+                        transform: rotate(90deg);
+            }
+            &-icon{
+                border: 1px solid #adaeb5;
+                width: 123px;
+                height: 122px;
+                border-radius: 50%;
+                position: relative;
+                display: block;
+                margin: 0 auto 14px;
+                i{
+                    color: #f97c27;
+                    font-size: 55px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .num{
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background-color: #b4b8ca;
+                    position: absolute;
+                    line-height: 24px;
+                    text-align: center;
+                    color: #ffffff;
+                    font-family: 'Roboto-Light';
+                    font-size: 15px;
+                    border-radius: 50%;
+                    top: 12px;
+                    left: 0;
+                }
+            }
+            h4{
+                color: #1a1746;
+                font-size: 18px;
+                padding-left: 20px;
+                font-family: 'Roboto-Bold';
+            }
+            ul{
+                margin-top: 25px;
+                li{
+                    position: relative;
+                    padding-left: 20px;
+                    margin-bottom: 18px;
+                    p{
+                        color: #474747;
+                        font-size: 16px;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        height: 5px;
+                        width: 5px;
+                        background-color: #f46c09;
+                        border-radius: 50%;
+                        left: 0;
+                        top: 7px;
+                    }
+                }
+            }
+        }
+    }
+    .getVisas{
+        text-align: center;
+        a{
+            border-radius: 7px;
+            background-color: #f76f0d;
+            color: #ffffff;
+            font-family: 'Roboto-Bold';
+            font-size: 18px;
+            display: inline-block;
+            padding: 12px 28px;
+            margin-top: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .info{
+        .wrapper{
+            @include flexbox;
+            @include justify-content(space-between);
+            .item{
+                width: calc(100% / 3 - 25px);
+                margin: 0;
+                position: relative;
+                &::after{
+                    bottom: inherit;
+                    top: 85px;
+                    left: inherit;
+                    right: -25px;
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}

@@ -467,6 +467,12 @@
       ]
     },
     {
+      "uid": "a42b598e4298f3319b25a2702a02e7ff",
+      "css": "location",
+      "code": 59401,
+      "src": "entypo"
+    },
+    {
       "uid": "59cbaad135f3573cac49126639daa37d",
       "css": "calendar2",
       "code": 59401,
@@ -576,6 +582,34 @@
       },
       "search": [
         "report"
+      ]
+    },
+    {
+      "uid": "dad80055e26d71c6bfc097aea9da7a01",
+      "css": "dotted-arrows",
+      "code": 59432,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "",
+        "width": 1000
+      },
+      "search": [
+        "dotted-arrows"
+      ]
+    },
+    {
+      "uid": "1cdd436e5a4cf623a105b30c37df1cfb",
+      "css": "dotted-arrows-2",
+      "code": 59433,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "",
+        "width": 1000
+      },
+      "search": [
+        "dotted-arrows-2"
       ]
     }
   ]
