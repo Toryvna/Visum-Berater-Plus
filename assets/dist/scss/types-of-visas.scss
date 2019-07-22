@@ -29,6 +29,9 @@
             li{
                 border-bottom: 1px solid #e6e6e6;
                 position: relative;
+                &:last-of-type{
+                    border: none;
+                }
                 &::before{
                     content: '';
                     position: absolute;
@@ -144,6 +147,9 @@
                 font-size: 18px;
                 display: inline-block;
                 padding: 12px 28px;
+                &:hover{
+                    box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
+                }
             }
         }
     }
@@ -156,15 +162,19 @@
         .wrapper{
             @include flexbox;
             @include justify-content(space-between);
+            @include align-items(flex-start);
         }
         .sideMenu{
             width: calc(30% - 10px);
             &_heading{
                 display: none;
             }
+            &__wrap{
+                transition: all .5s;
+            }
             &_list{
                 display: block;
-                position: inherit;
+                position: static;
                 background-color: #f5f6fa;
                 border-radius: 0;
                 box-shadow: none;
@@ -215,8 +225,10 @@
         }
         .content{
             width: calc(65% - 13px);
+            padding-bottom: 83px;
             .warningBlk {
                 padding: 22px 34px;
+                margin-bottom: 52px;
                 h4{
                     font-size: 24px;
                     margin-bottom: 21px;
@@ -227,6 +239,25 @@
                 p{
                     margin-bottom: 24px;
                 }
+            }
+            .article{
+                margin-top: 0;
+                margin-bottom: 41px;
+                &_heading {
+                    .text {
+                        bottom: 32px;
+                        padding: 0 28px;
+                    }
+                }
+                .textContent {
+                    padding: 30px 25px;
+                    p {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+            .getVisas {
+                margin-top: 61px;
             }
         }
     }

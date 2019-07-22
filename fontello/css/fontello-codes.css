@@ -18,6 +18,7 @@
 .icon-health:before { content: '\e811'; } /* '' */
 .icon-hotel:before { content: '\e812'; } /* '' */
 .icon-info-button:before { content: '\e813'; } /* '' */
+.icon-invitation:before { content: '\e815'; } /* '' */
 .icon-loop:before { content: '\e816'; } /* '' */
 .icon-message:before { content: '\e817'; } /* '' */
 .icon-passport:before { content: '\e818'; } /* '' */
@@ -32,5 +33,6 @@
 .icon-passport-2:before { content: '\e824'; } /* '' */
 .icon-other-services:before { content: '\e825'; } /* '' */
 .icon-report2:before { content: '\e827'; } /* '' */
+.icon-calendar-2:before { content: '\e82c'; } /* '' */
 .icon-icon7:before { content: '\f104'; } /* '' */
 .icon-icon1:before { content: '\f105'; } /* '' */

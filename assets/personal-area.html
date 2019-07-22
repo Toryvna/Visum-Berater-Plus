@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/personal-area.css">
+</head>
+<body>
+
+<!-- build:section layout.popups-->
+<!-- /build -->
+
+<!-- build:section layout.header-->
+<!-- /build -->
+
+<section class="main">
+    <div class="container">
+        <h2>Личный кабинет</h2>
+        <div class="topTabs">
+            <div id="current_value" class="current_value"><i class="icon-credit-card"></i> <p>Мой заказ</p></div>
+            <div id="current_menu" class="current_menu">
+                <ul class="tabsList">
+                    <li data-tab="tab1" class="active">
+                        <i class="icon-credit-card"></i><p>Мой заказ</p>
+                    </li>
+                    <li data-tab="tab2">
+                        <i class="icon-calendar-2"></i><p>Статус заказа</p>
+                    </li>
+                    <li data-tab="tab3">
+                        <i class="icon-business-cards"></i><p>Паспортные данные</p>
+                    </li>
+                    <li data-tab="tab4">
+                        <i class="icon-camera"></i><p>Фотосервис</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content tab1 active">
+            <div class="download-blk">
+                <div class="top">
+                    <img src="../img/order-doc.png" alt="">
+                </div>
+                <div class="bottom">
+                    <p>
+                        <span class="label">PDF</span>
+                        visa_natalia_volodchenko_2019
+                    </p>
+                    <div class="download-btn">
+                        <a href="../img/test.pdf" download><i class="icon-download-arrow"></i></a>
+                        <span>304 KB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content tab2">
+            <!-- .done - пройденный этап
+                 .active - текущее состояние -->
+            <div class="status-line">
+                <div class="received done"><span>Получен</span></div>
+                <div class="paid done"><span>Оплачен</span></div>
+                <div class="inprocessing active"><span>В обработке</span></div>
+                <div class="provider"><span>У провайдера</span></div>
+                <div class="completed"><span>Получен</span></div>
+
+                <!-- скрыть .time-label, когда все этапы done -->
+                <div class="time-label"><span>расчетное время:</span> <span>2 дек. - 6 дек.</span> </div>
+            </div>
+        </div>
+        <div class="tab-content tab3">
+            <h4>Ваши персональные данные</h4>
+            <p>Пожалуйста, отнеситесь с пониманием: по новому закону мы обязаны запросить эти данные у анонимного пользователя. </p>
+            <p>К счастью, только один раз. Заполните все поля - тогда вы сможете подтвердить свой платеж.</p>
+            <form>
+                <div class="form-wrap">
+                    <div class="form-input">
+                        <label>Имя</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-input">
+                        <label>Фамилия</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-input">
+                        <label>Отчество</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="form-wrap">
+                    <div class="form-input">
+                        <label>Серия и номер паспорта</label>
+                        <input type="text">
+                        <span>10 цифр, без пробелов</span>
+                    </div>
+                    <div class="form-selects">
+                        <label>Дата выдачи</label>
+                        <div class="wrap">
+                            <div class="form-select">
+                                <select
+                                data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'  name="day" id="day"></select>
+                            </div>
+                            <div class="form-select">
+                                <select
+                                data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'  name="month" id="month"></select>
+                            </div>
+                            <div class="form-select">
+                                <select
+                                    data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' name="year" id="year"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-button">
+                    <button>Сохранить данные</button>
+                </div>
+            </form>
+        </div>
+        <div class="tab-content tab4">
+            <div class="form__file">
+                <input type="file" name="file" id="file" class="inputfile" accept="image/x-png,image/gif,image/jpeg" required>
+                <label for="file">
+                    <span class="preview"></span>
+                    <span class="uploadTitle">Загрузить фото</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- build:section layout.footer-->
+<!-- /build -->
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jcf.min.js"></script>
+<script src="../js/jcf.select.min.js"></script>
+<script src="../js/script.min.js"></script>
+<script src="../js/personal-area.min.js"></script>
+
+
+</body>
+</html>

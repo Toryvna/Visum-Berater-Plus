@@ -1,0 +1,116 @@
+@import "libs/flexbox";
+
+.main{
+    padding: 45px 0;
+    margin-top: 80px;
+    .item{
+        margin-bottom: 25px;
+        &__heading{
+            border-radius: 5px 5px 0 0;
+            background-color: #f5f6fa;
+            padding: 20px 17px;
+            border-bottom: 2px solid #f47113;
+            @include flexbox;
+            i{
+                color: #f97c27;
+                font-size: 16px;
+                margin-right: 15px;
+            }
+            h4{
+                color: #1a1746;
+                font-size: 18px;
+            }
+        }
+        &__list{
+            li{
+                border-bottom: 1px solid #e6e6e6;
+                position: relative;
+                &:hover{
+                    background-color: #f5f6fa;
+                    a{
+                        color: #f97c27;
+                        text-decoration: underline;
+                    }
+                }
+                &:last-of-type{
+                    border: none;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    top: 22px;
+                    width: 3px;
+                    height: 3px;
+                    background-color: #f47113;
+                    border-radius: 50%;
+                }
+                a{
+                    color: #1a1746;
+                    font-size: 16px;
+                    padding: 10px 25px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .getVisas{
+        text-align: right;
+        margin-top: 25px;
+        a{
+            border-radius: 7px;
+            background-color: #f76f0d;
+            color: #ffffff;
+            font-family: 'Roboto-Bold';
+            font-size: 18px;
+            display: inline-block;
+            padding: 12px 28px;
+            &:hover{
+                box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        .wrapper{
+            @include flexbox;
+            @include justify-content(space-between);
+            @include flex-wrap(wrap);
+            .item{
+                width: calc(50% - 20px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .main{
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 1240px){
+    .main{
+        padding-bottom: 128px;
+        .wrapper{
+            .item{
+                width: calc(100% / 3 - 66px);
+                margin-bottom: 38px;
+                &__list{
+                    padding-top: 23px;
+                    li{
+                        &::before{
+                            top: 18px;
+                        }
+                        a{
+                            padding: 8px 31px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
