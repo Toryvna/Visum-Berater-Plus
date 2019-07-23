@@ -1,6 +1,9 @@
 @import "flexbox";
 
 .footer{
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
     h3{
         color: #1a1746;
         font-size: 16px;

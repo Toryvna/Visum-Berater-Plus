@@ -24,12 +24,16 @@ grunt.initConfig({
 				'../markup/js/swiper.min.js': ['dist/js/plugin/swiper.js'],
 				'../markup/js/jcf.min.js': ['dist/js/plugin/jcf.js'],
 				'../markup/js/jcf.select.min.js': ['dist/js/plugin/jcf.select.js'],
+				'../markup/js/datepicker.min.js': ['dist/js/plugin/datepicker.js'],
+				
 				
 				'../markup/js/script.min.js': ['dist/js/script.js'],
 				'../markup/js/home.min.js': ['dist/js/home.js'],
 				'../markup/js/types-of-visas.min.js': ['dist/js/types-of-visas.js'],
 				'../markup/js/pricing.min.js': ['dist/js/pricing.js'],
 				'../markup/js/personal-area.min.js': ['dist/js/personal-area.js'],
+				'../markup/js/visa-application.min.js': ['dist/js/visa-application.js'],
+				
 				
 				
 				

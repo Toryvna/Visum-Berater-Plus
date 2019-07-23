@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление визы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/visa-application.css">
+</head>
+<body>
+
+<!-- build:section layout.popups-->
+<!-- /build -->
+
+<!-- build:section layout.header-->
+<!-- /build -->
+
+<section class="visa">
+    <div class="container">
+        <div class="visa__top">
+            <div class="item active">
+                <div class="item-icon">
+                    <span class="num">1</span>
+                    <i class="icon-1-stage"></i>
+                </div>
+                <p> Расчет стоимости</p>
+            </div>
+            <div class="item">
+                <div class="item-icon">
+                    <span class="num">2</span>
+                    <i class="icon-2-stage"></i>
+                </div>
+                <p>Подготовка документов</p>
+            </div>
+            <div class="item">
+                <div class="item-icon">
+                    <span class="num">3</span>
+                    <i class="icon-3-stage"></i>
+                </div>
+                <p>Оплата визы</p>
+            </div>
+        </div>
+
+        <div class="visa__data">
+            <form>
+                <div class="step step1">
+                    <div class="heading">
+                        <h3>Шаг 1 </h3>
+                        <div class="sub-text">
+                            <p>Расчет стоимости </p>
+                            <span class="tooltip"><i class="icon-info-button"></i></span>
+                            <div class="tooltip__text">
+                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__inner step__inner1">
+                        <div class="form-wrap-2">
+                            <div class="form-select item">
+                                <label>Страна</label>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <option>Россия</option>
+                                    <option>Россия2</option>
+                                    <option>Россия3</option>
+                                </select>
+                            </div>
+                            <div class="form-select item">
+                                <label>Тип визы</label>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <option>туристическая</option>
+                                    <option>туристическая2</option>
+                                    <option>туристическая3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-wrap-2">
+                            <div class="form-wrap-3 item">
+                                <div class="form-calendar block">
+                                    <label>Въезд</label>
+                                    <input type="text" class="datepicker"  placeholder="" readonly="readonly">
+                                    <i class="icon-calendar-2"></i>
+                                </div>
+                                <div class="form-calendar block">
+                                    <label>Выезд</label>
+                                    <input type="text" class="datepicker"  placeholder="" readonly="readonly">
+                                    <i class="icon-calendar-2"></i>
+                                </div>
+                                <div class="form-select block">
+                                    <label>Кол-во заездов</label>
+                                    <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-select item">
+                                <label>Время обработки</label>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <option>3-4 рабочих дня консульства (Экспресс)    109,00 €</option>
+                                    <option>5-6 рабочих дня консульства (Экспресс)    109,00 €</option>
+                                    <option>7-8 рабочих дня консульства (Экспресс)    109,00 €</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formInfo__bottom">
+                            <div class="text">
+                                <p>Предварительная стоимость Вашей визы: </p>
+                                <span>202,90 €</span>
+                            </div>
+                            <div class="form-buttons">
+                                <button class="next">Продолжить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__inner step__inner2">
+                        <div class="applicants-wrap">
+                            <div class="multi-fields">
+                                <div class="multi-field">
+                                    <h4>Заявитель <span class="numApplicant">1</span></h4>
+                                    <div class="form-wrap-2">
+                                        <div class="form-input item">
+                                            <label>Имя</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-calendar item">
+                                            <label>Год рождения</label>
+                                            <input type="text" class="datepicker-year"  placeholder="" readonly="readonly">
+                                            <i class="icon-calendar-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap-2">
+                                        <div class="form-input item">
+                                            <label>Фамилия</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-select item">
+                                            <label>Гражданство</label>
+                                            <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                                <option>Российской Федерации</option>
+                                                <option>Российской Федерации</option>
+                                                <option>Российской Федерации</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="addApplicant" id="addApplicant">
+                                <p><i class="icon-plus"></i>добавить заявителя</p>
+                            </div>
+                        </div>
+                        <div class="formInfo__bottom">
+                            <div class="form-buttons">
+                                <button class="back">Вернуться</button>
+                                <button class="next">Продолжить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step step2">
+                    <div class="heading">
+                        <h3>Шаг 2 </h3>
+                        <div class="sub-text">
+                            <p>Заполнение анкеты </p>
+                            <span class="tooltip"><i class="icon-info-button"></i></span>
+                            <div class="tooltip__text">
+                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__inner step__inner1">
+                        <div class="places-wrap">
+                            <div class="multi-places">
+                                <div class="form-wrap-2 multi-place">
+                                    <div class="form-select item">
+                                        <label>Места которые вы намерены посетить в России</label>
+                                        <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                            <option>Орел</option>
+                                            <option>Сочи</option>
+                                            <option>Сочи</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-select item">
+                                        <label>Места которые вы намерены посетить в России</label>
+                                        <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                            <option>Сочи</option>
+                                            <option>Орел</option>
+                                            <option>Сочи</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="addPlace">
+                                <p><i class="icon-plus"></i>добавить населенный пункт</p>
+                            </div>
+                        </div>
+                        <div class="form-wrap-2">
+                            <div class="form-select item">
+                                <label>В какую страну выезжаете из России</label>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <option>Монголия</option>
+                                    <option>Монголия</option>
+                                    <option>Монголия</option>
+                                </select>
+                            </div>
+                            <div class="form-select item">
+                                <label>В какой город в этой стране</label>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <option>Улан-Батор</option>
+                                    <option>Улан-Батор</option>
+                                    <option>Улан-Батор</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formInfo__bottom">
+                            <div class="form-buttons">
+                                <button class="back">Вернуться</button>
+                                <button class="next">Продолжить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__inner step__inner2">
+                        <h4>Сервис</h4>
+                        <div class="accordion active">
+                            <div class="accordion-heading">
+                                <div class="form-checkbox">
+                                    <label class="wrap">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="title">
+                                            Помощь по заполнению анкеты. <span class="grey">(Заполнение Анкеты на сайте посольства одним нажатием кнопки)</span>
+                                        </span>
+
+                                        <span class="tooltip"><i class="icon-info-button"></i>
+                                            <span class="tooltip__text">
+                                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                                            </span>
+                                        </span>
+                                        <span class="price">+ 9,90 €</span>
+                                    </label>
+                                </div>
+                                <div class="info">
+                                    <h4>Заполнение заявление на визу в Россию</h4>
+                                    <p>Если Вы все же хотите попробовать самостоятельно заполнить заявление на визу, обязательно имейте наготове Ваш загранпаспорт и другие необходимые документы для заполнения анкеты.</p>
+                                    <p><strong>Важно!</strong> После заполнения электронного заявления на визу в Россию, запишите себе номер Вашего электронного заявления & пароль и перешлите их нам вместе с Вашими документами.</p>
+                                    <div class="bottom">
+                                        <p><span class="yellow">Важно!</span> Если Вы заказали у нас туристическое приглашение, при заполнении заявления на визу пожалуйста внесите в соответствующее поле <strong>номер Вашего электронного заявления.</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-body">
+                                <p>С нами Вы сэкономите Ваше время и нервы. Всего за 9,90 € мы заполним анкету за Вас!</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion active">
+                            <div class="accordion-heading">
+                                <div class="form-checkbox">
+                                    <label class="wrap">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="title">Приглашение</span>
+
+                                        <span class="tooltip"><i class="icon-info-button"></i>
+                                            <span class="tooltip__text">
+                                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                                            </span>
+                                        </span>
+                                        <span class="price">+ 9,90 €</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion active">
+                            <div class="accordion-heading">
+                                <div class="form-checkbox">
+                                    <label class="wrap">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="title">Медицинская страховка</span>
+
+                                        <span class="tooltip"><i class="icon-info-button"></i>
+                                            <span class="tooltip__text">
+                                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                                            </span>
+                                        </span>
+                                        <span class="price">+ 14,90 €</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Для поездки в Россию вы должны 
+                                    предоставить действительную 
+                                    медицинскую страховку, 
+                                    действующей в Российской 
+                                    Федерации.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion active">
+                            <div class="accordion-heading">
+                                <div class="form-checkbox">
+                                    <label class="wrap">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="title">Фотосервис</span>
+
+                                        <span class="tooltip"><i class="icon-info-button"></i>
+                                            <span class="tooltip__text">
+                                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                                            </span>
+                                        </span>
+                                        <span class="price">+ 9,00 €</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion active">
+                            <div class="accordion-heading">
+                                <div class="form-checkbox">
+                                    <label class="wrap">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="title">Курьерский сервис</span>
+
+                                        <span class="tooltip"><i class="icon-info-button"></i>
+                                            <span class="tooltip__text">
+                                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                                            </span>
+                                        </span>
+                                        <span class="price">+ 29,00 €</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Курьер заберет у Вас документы 
+                                    на визу в удобное для Вас время.</p>
+                                <h4>Адрес для доставки паспорта</h4>
+                                <div class="formInner">
+                                    <div class="form-input">
+                                        <label>Фирма</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Имя <span>*</span></label>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Фамилия <span>*</span></label>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="form-input">
+                                            <label>Улица <span>*</span></label>
+                                            <input type="text" required>
+                                        </div>
+                                        <div class="form-input">
+                                            <label>Номер дома <span>*</span></label>
+                                            <input type="text" required>
+                                        </div>
+                                        <div class="form-input">
+                                            <label>Индекс <span>*</span></label>
+                                            <input type="text" required>
+                                        </div>
+                                        <div class="form-input">
+                                            <label>Город <span>*</span></label>
+                                            <input type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Страна <span>*</span></label>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Дополнительная информация 
+                                            для доставки (этаж, внутренний 
+                                            двор и т.п.)</label>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="form-select">
+                                        <label>Выберите подходящее вам 
+                                            время</label>
+                                        <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Рекомендуем Вам ознакомиться:</p>
+                        <a href="javascript:void(0)">Туристическая виза в Россию: Hеобходимые документы</a>
+                        <div class="formInfo__bottom">
+                            <div class="form-buttons">
+                                <button class="back">Вернуться</button>
+                                <button class="next">Продолжить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- build:section layout.footer-->
+<!-- /build -->
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jcf.min.js"></script>
+<script src="../js/jcf.select.min.js"></script>
+<script src="../js/datepicker.min.js"></script>
+
+
+<script src="../js/script.min.js"></script>
+<script src="../js/visa-application.min.js"></script>
+
+</body>
+</html>
