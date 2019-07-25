@@ -22,9 +22,9 @@ $(document).ready(function(){
                 } else {
                     $wrap.removeClass("fixed");
                 }
-                if ($window.scrollTop() + $sidebarHeight + $breadCrumbs > $footerOffsetTop) {
+                if ($window.scrollTop() + $sidebarHeight + $breadCrumbs + 60 > $footerOffsetTop) {
                   $sidebar.css({
-                      "bottom": 0,
+                      "bottom": -50,
                       "top": 'inherit',
                       'position': 'absolute',
                       'width' : $sidebarWidth
@@ -43,7 +43,7 @@ $(document).ready(function(){
                         "bottom": 'inherit',
                         "top": '0',
                         'position': 'static',
-                      });
+                    });
                 }
             }
         }else{
