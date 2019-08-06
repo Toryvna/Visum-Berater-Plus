@@ -44,7 +44,7 @@
 
         <div class="visa__data">
             <form>
-                <div class="step step1">
+                <div class="step step1 step__inner1_1 active">
                     <div class="heading">
                         <h3>Шаг 1 </h3>
                         <div class="sub-text">
@@ -55,11 +55,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="step__inner step__inner1">
+
+                    <div class="step__inner">
                         <div class="form-wrap-2">
                             <div class="form-select item">
                                 <label>Страна</label>
-                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
                                     <option>Россия</option>
                                     <option>Россия2</option>
                                     <option>Россия3</option>
@@ -67,7 +68,7 @@
                             </div>
                             <div class="form-select item">
                                 <label>Тип визы</label>
-                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
                                     <option>туристическая</option>
                                     <option>туристическая2</option>
                                     <option>туристическая3</option>
@@ -88,7 +89,7 @@
                                 </div>
                                 <div class="form-select block">
                                     <label>Кол-во заездов</label>
-                                    <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                    <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -97,7 +98,7 @@
                             </div>
                             <div class="form-select item">
                                 <label>Время обработки</label>
-                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
                                     <option>3-4 рабочих дня консульства (Экспресс)    109,00 €</option>
                                     <option>5-6 рабочих дня консульства (Экспресс)    109,00 €</option>
                                     <option>7-8 рабочих дня консульства (Экспресс)    109,00 €</option>
@@ -110,21 +111,64 @@
                                 <span>202,90 €</span>
                             </div>
                             <div class="form-buttons">
-                                <button class="next">Продолжить</button>
+                                <button class="next" data-step="step__inner1_2">Продолжить</button>
                             </div>
                         </div>
                     </div>
-                    <div class="step__inner step__inner2">
+                </div>
+
+                <div class="step step1 step__inner1_2">
+                    <div class="heading">
+                        <h3>Шаг 1 </h3>
+                        <div class="sub-text">
+                            <p>Расчет стоимости </p>
+                            <span class="tooltip"><i class="icon-info-button"></i></span>
+                            <div class="tooltip__text">
+                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- результаты после шага 1.1 -->
+                    <div class="stepResults">
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>Страна: </p><span>Россия</span>
+                                    </div>
+                                    <div class="line">
+                                        <p>Вид визы: </p><span>туристическая</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="flex-wrap">
+                                        <div class="line">
+                                            <p>Въезд: </p><span>18.06.19 </span>
+                                        </div>
+                                        <div class="line">
+                                            <p>Выезд: </p><span>19.06.19 </span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <p>Время обработки: </p><span>3-4 рабочих дня консульства (Экспресс)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    
+                    <div class="step__inner">
                         <div class="applicants-wrap">
                             <div class="multi-fields">
-                                <div class="multi-field">
+                                <div class="multi-field main-clone">
                                     <h4>Заявитель <span class="numApplicant">1</span></h4>
                                     <div class="form-wrap-2">
                                         <div class="form-input item">
                                             <label>Имя</label>
                                             <input type="text">
                                         </div>
-                                        <div class="form-calendar item">
+                                        <div class="form-calendar item only-year">
                                             <label>Год рождения</label>
                                             <input type="text" class="datepicker-year"  placeholder="" readonly="readonly">
                                             <i class="icon-calendar-2"></i>
@@ -139,8 +183,8 @@
                                             <label>Гражданство</label>
                                             <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
                                                 <option>Российской Федерации</option>
-                                                <option>Российской Федерации</option>
-                                                <option>Российской Федерации</option>
+                                                <option>Российской Федерации2</option>
+                                                <option>Российской Федерации3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -152,13 +196,14 @@
                         </div>
                         <div class="formInfo__bottom">
                             <div class="form-buttons">
-                                <button class="back">Вернуться</button>
-                                <button class="next">Продолжить</button>
+                                <button class="back" data-step="step__inner1_1">Вернуться</button>
+                                <button class="next" data-step="step__inner2_1">Продолжить</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="step step2">
+
+                <div class="step step2 step__inner2_1">
                     <div class="heading">
                         <h3>Шаг 2 </h3>
                         <div class="sub-text">
@@ -169,10 +214,131 @@
                             </div>
                         </div>
                     </div>
-                    <div class="step__inner step__inner1">
+
+                    <!-- результаты после шага 1.2 -->
+                    <div class="stepResults"> 
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>Страна: </p><span>Россия</span>
+                                    </div>
+                                    <div class="line">
+                                        <p>Вид визы: </p><span>туристическая</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="flex-wrap">
+                                        <div class="line">
+                                            <p>Въезд: </p><span>18.06.19 </span>
+                                        </div>
+                                        <div class="line">
+                                            <p>Выезд: </p><span>19.06.19 </span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <p>Время обработки: </p><span>3-4 рабочих дня консульства (Экспресс)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="applicants-row">
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 1</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 2</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 3</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="show-all">Все заявители</span>
+                            </div>
+                            <div class="row flex-3">
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>Места для посещения: </p><span>Орел, Орел</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>В какую страну выезжаете из России: </p><span>Монголия</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>В какой город в этой стране: </p><span>Улан-Батор</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="step__inner">
                         <div class="places-wrap">
                             <div class="multi-places">
-                                <div class="form-wrap-2 multi-place">
+                                <div class="form-wrap-2 multi-place main-place">
                                     <div class="form-select item">
                                         <label>Места которые вы намерены посетить в России</label>
                                         <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
@@ -198,29 +364,173 @@
                         <div class="form-wrap-2">
                             <div class="form-select item">
                                 <label>В какую страну выезжаете из России</label>
-                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
                                     <option>Монголия</option>
-                                    <option>Монголия</option>
-                                    <option>Монголия</option>
+                                    <option>Монголия2</option>
+                                    <option>Монголия3</option>
                                 </select>
                             </div>
                             <div class="form-select item">
                                 <label>В какой город в этой стране</label>
-                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
                                     <option>Улан-Батор</option>
-                                    <option>Улан-Батор</option>
-                                    <option>Улан-Батор</option>
+                                    <option>Улан-Батор2</option>
+                                    <option>Улан-Батор3</option>
                                 </select>
                             </div>
                         </div>
                         <div class="formInfo__bottom">
                             <div class="form-buttons">
-                                <button class="back">Вернуться</button>
-                                <button class="next">Продолжить</button>
+                                <button class="back" data-step="step__inner1_2">Вернуться</button>
+                                <button class="next" data-step="step__inner2_2">Продолжить</button>
                             </div>
                         </div>
                     </div>
-                    <div class="step__inner step__inner2">
+                </div>
+
+                <div class="step step2 step__inner2_2">
+                    <div class="heading">
+                        <h3>Шаг 2 </h3>
+                        <div class="sub-text">
+                            <p>Заполнение анкеты </p>
+                            <span class="tooltip"><i class="icon-info-button"></i></span>
+                            <div class="tooltip__text">
+                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- результаты после шага 2 -->
+                    <div class="stepResults"> 
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>Страна: </p><span>Россия</span>
+                                    </div>
+                                    <div class="line">
+                                        <p>Вид визы: </p><span>туристическая</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="flex-wrap">
+                                        <div class="line">
+                                            <p>Въезд: </p><span>18.06.19 </span>
+                                        </div>
+                                        <div class="line">
+                                            <p>Выезд: </p><span>19.06.19 </span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <p>Время обработки: </p><span>3-4 рабочих дня консульства (Экспресс)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="applicants-row">
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 1</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 2</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 3</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="show-all">Все заявители</span>
+                            </div>
+                            <div class="row flex-3">
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>Места для посещения: </p><span>Орел, Орел</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>В какую страну выезжаете из России: </p><span>Монголия</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>В какой город в этой стране: </p><span>Улан-Батор</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <ul>
+                                        <li>Медицинская страховка</li>
+                                        <li>Курьерский сервис</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="step__inner ">
                         <h4>Сервис</h4>
                         <div class="accordion active">
                             <div class="accordion-heading">
@@ -383,7 +693,7 @@
                                     <div class="form-select">
                                         <label>Выберите подходящее вам 
                                             время</label>
-                                        <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
+                                        <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
                                             <option>13</option>
                                             <option>14</option>
                                             <option>15</option>
@@ -397,10 +707,159 @@
                         <a href="javascript:void(0)">Туристическая виза в Россию: Hеобходимые документы</a>
                         <div class="formInfo__bottom">
                             <div class="form-buttons">
-                                <button class="back">Вернуться</button>
-                                <button class="next">Продолжить</button>
+                                <button class="back" data-step="step__inner2_1">Вернуться</button>
+                                <button class="next" data-step="step__inner2_3">Продолжить</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="step step2 step__inner2_3">
+                    <div class="heading">
+                        <h3>Шаг 2 </h3>
+                        <div class="sub-text">
+                            <p>Заполнение анкеты </p>
+                            <span class="tooltip"><i class="icon-info-button"></i></span>
+                            <div class="tooltip__text">
+                                <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- результаты после шага 2 -->
+                    <div class="stepResults"> 
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>Страна: </p><span>Россия</span>
+                                    </div>
+                                    <div class="line">
+                                        <p>Вид визы: </p><span>туристическая</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="flex-wrap">
+                                        <div class="line">
+                                            <p>Въезд: </p><span>18.06.19 </span>
+                                        </div>
+                                        <div class="line">
+                                            <p>Выезд: </p><span>19.06.19 </span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <p>Время обработки: </p><span>3-4 рабочих дня консульства (Экспресс)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="applicants-row">
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 1</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 2</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="applicant">
+                                    <div class="row row-heading">
+                                        <p>Заявитель 3</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Имя: </p><span>Татьяна</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Фамилия: </p><span>Володченко</span>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="line">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="show-all">Все заявители</span>
+                            </div>
+                            <div class="row flex-3">
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>Места для посещения: </p><span>Орел, Орел</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>В какую страну выезжаете из России: </p><span>Монголия</span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="line">
+                                        <p>В какой город в этой стране: </p><span>Улан-Батор</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <ul>
+                                        <li>Медицинская страховка</li>
+                                        <li>Курьерский сервис</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+
+                    <div class="step__inner">
+                        <h3>Данные для анкеты</h3>
+                        <p>Для подачи заявления на получение визы в Россию вам необходимо предоставить полностью и без ошибок заполненную визовую анкету</p>
                     </div>
                 </div>
             </form>
