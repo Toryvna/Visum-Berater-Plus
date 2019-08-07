@@ -495,11 +495,27 @@
                     background-color: #dcdada;
                     color: #858585;
                 }
-                &.next,
-                &.confirm{
+                &.next{
                     background-color: #f76f0d;
                     color: #ffffff;
                 }
+                &:hover{
+                    box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
+                }
+            }
+            .confirm{
+                background-color: #f76f0d;
+                color: #ffffff;
+                border-radius: 7px;
+                font-family: 'Roboto-Bold';
+                font-size: 18px;
+                display: inline-block;
+                padding: 12px 28px;
+                min-width: 181px;
+                text-align: center;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
                 &:hover{
                     box-shadow: 0 5px 16px 1px rgba(208, 213, 221, 0.51);
                 }
