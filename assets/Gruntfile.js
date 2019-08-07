@@ -33,10 +33,6 @@ grunt.initConfig({
 				'../markup/js/pricing.min.js': ['dist/js/pricing.js'],
 				'../markup/js/personal-area.min.js': ['dist/js/personal-area.js'],
 				'../markup/js/visa-application.min.js': ['dist/js/visa-application.js'],
-				
-				
-				
-				
 			}
 		}
 	},

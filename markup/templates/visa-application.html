@@ -261,12 +261,12 @@
                                 <div class="form-wrap-3 item">
                                     <div class="form-calendar block">
                                         <label>Въезд</label>
-                                        <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                        <input type="text" class="from" name="from" placeholder="" readonly="readonly">
                                         <i class="icon-calendar-2"></i>
                                     </div>
                                     <div class="form-calendar block">
                                         <label>Выезд</label>
-                                        <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                        <input type="text" class="to" name="to" placeholder="" readonly="readonly">
                                         <i class="icon-calendar-2"></i>
                                     </div>
                                     <div class="form-select block">
@@ -293,7 +293,7 @@
                                     <span>202,90 €</span>
                                 </div>
                                 <div class="form-buttons">
-                                    <button class="next" data-step="step__inner1_2">Продолжить</button>
+                                    <a href="javascript:void(0)" class="btn next" data-step="step__inner1_2">Продолжить</a>
                                 </div>
                             </div>
                         </div>
@@ -378,8 +378,8 @@
                             </div>
                             <div class="formInfo__bottom">
                                 <div class="form-buttons">
-                                    <button class="back" data-step="step__inner1_1">Вернуться</button>
-                                    <button class="next" data-step="step__inner2_1">Продолжить</button>
+                                    <a href="javascript:void(0)" class="btn back" data-step="step__inner1_1">Вернуться</a>
+                                    <a href="javascript:void(0)" class="btn next" data-step="step__inner2_1">Продолжить</a>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +397,7 @@
                             </div>
                         </div>
 
-                        <!-- результаты после шага 1.2 -->
+                        <!-- результаты после предыдущего шага -->
                         <div class="stepResults">
                             <div class="table">
                                 <div class="row">
@@ -497,46 +497,19 @@
                                     </div>
                                     <span class="show-all">Все заявители</span>
                                 </div>
-                                <div class="row flex-3">
-                                    <div class="cell">
-                                        <div class="line">
-                                            <p>Места для посещения: </p><span>Орел, Орел</span>
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div class="line">
-                                            <p>В какую страну выезжаете из России: </p><span>Монголия</span>
-                                        </div>
-                                    </div>
-                                    <div class="cell">
-                                        <div class="line">
-                                            <p>В какой город в этой стране: </p><span>Улан-Батор</span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <!--  -->
                         <div class="step__inner">
                             <div class="places-wrap">
-                                <div class="multi-places">
-                                    <div class="form-wrap-2 multi-place main-place">
-                                        <div class="form-select item">
-                                            <label>Места которые вы намерены посетить в России</label>
-                                            <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
-                                                <option>Орел</option>
-                                                <option>Сочи</option>
-                                                <option>Сочи</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-select item">
-                                            <label>Места которые вы намерены посетить в России</label>
-                                            <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}'>
-                                                <option>Сочи</option>
-                                                <option>Орел</option>
-                                                <option>Сочи</option>
-                                            </select>
-                                        </div>
+                                <div class="form-wrap-2 multi-places">
+                                    <div class="form-input item main-place">
+                                        <label>Места которые вы намерены посетить в России</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input item">
+                                        <label>Места которые вы намерены посетить в России</label>
+                                        <input type="text">
                                     </div>
                                 </div>
                                 <div class="addPlace">
@@ -552,19 +525,21 @@
                                         <option>Монголия3</option>
                                     </select>
                                 </div>
-                                <div class="form-select item">
+                                <div class="form-input item">
                                     <label>В какой город в этой стране</label>
-                                    <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
-                                        <option>Улан-Батор</option>
-                                        <option>Улан-Батор2</option>
-                                        <option>Улан-Батор3</option>
-                                    </select>
+                                    <input list="cityId" type="text">
+                                    <datalist id="cityId">
+                                        <option value="Москва"></option>
+                                        <option value="Омск"></option>
+                                        <option value="Санкт-Петербург"></option>
+                                        <option value="Томск"></option>
+                                    </datalist>
                                 </div>
                             </div>
                             <div class="formInfo__bottom">
                                 <div class="form-buttons">
-                                    <button class="back" data-step="step__inner1_2">Вернуться</button>
-                                    <button class="next" data-step="step__inner2_2">Продолжить</button>
+                                    <a href="javascript:void(0)" class="btn back" data-step="step__inner1_2">Вернуться</a>
+                                    <a href="javascript:void(0)" class="btn next" data-step="step__inner2_2">Продолжить</a>
                                 </div>
                             </div>
                         </div>
@@ -582,7 +557,7 @@
                             </div>
                         </div>
 
-                        <!-- результаты после шага 2 -->
+                        <!-- результаты после предыдущих шагов -->
                         <div class="stepResults">
                             <div class="table">
                                 <div class="row">
@@ -682,6 +657,8 @@
                                     </div>
                                     <span class="show-all">Все заявители</span>
                                 </div>
+                            </div>
+                            <div class="table">
                                 <div class="row flex-3">
                                     <div class="cell">
                                         <div class="line">
@@ -697,16 +674,6 @@
                                         <div class="line">
                                             <p>В какой город в этой стране: </p><span>Улан-Батор</span>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="table">
-                                <div class="row">
-                                    <div class="cell">
-                                        <ul>
-                                            <li>Медицинская страховка</li>
-                                            <li>Курьерский сервис</li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -866,13 +833,17 @@
                                             <label>Дополнительная информация для доставки (этаж, внутренний двор и т.п.)</label>
                                             <input type="text" required>
                                         </div>
+                                        <div class="form-calendar block">
+                                            <label>Выберите подходящий вам день</label>
+                                            <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                            <i class="icon-calendar-2"></i>
+                                        </div>
                                         <div class="form-select">
-                                            <label>Выберите подходящее вам время
-                                            </label>
+                                            <label>Выберите подходящее вам время</label>
                                             <select data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": true}' class="currentSelect">
-                                                <option>13</option>
-                                                <option>14</option>
-                                                <option>15</option>
+                                                <option>13.00</option>
+                                                <option>14.00</option>
+                                                <option>15.00</option>
                                             </select>
                                         </div>
                                     </div>
@@ -883,8 +854,8 @@
                             <a href="javascript:void(0)">Туристическая виза в Россию: Hеобходимые документы</a>
                             <div class="formInfo__bottom">
                                 <div class="form-buttons">
-                                    <button class="back" data-step="step__inner2_1">Вернуться</button>
-                                    <button class="next" data-step="step__inner2_3">Продолжить</button>
+                                    <a href="javascript:void(0)" class="btn back" data-step="step__inner2_1">Вернуться</a>
+                                    <a href="javascript:void(0)" class="btn next" data-step="step__inner2_3">Продолжить</a>
                                 </div>
                             </div>
                         </div>
@@ -902,7 +873,7 @@
                             </div>
                         </div>
 
-                        <!-- результаты после шага 2 -->
+                        <!-- результаты после предыдущих шагов -->
                         <div class="stepResults">
                             <div class="table">
                                 <div class="row">
@@ -1002,6 +973,8 @@
                                     </div>
                                     <span class="show-all">Все заявители</span>
                                 </div>
+                            </div>
+                            <div class="table">
                                 <div class="row flex-3">
                                     <div class="cell">
                                         <div class="line">
@@ -1036,6 +1009,923 @@
                         <div class="step__inner">
                             <h3>Данные для анкеты</h3>
                             <p>Для подачи заявления на получение визы в Россию вам необходимо предоставить полностью и без ошибок заполненную визовую анкету</p>
+
+                            <!-- кол-во .wrapper равно кол-ву заявителей, указаных ранее -->
+                            <div class="wrapper">
+                                <h4>Заявитель 1</h4>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Имя</label>
+                                        <input type="text" value="Татьяна" readonly>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Фамилия</label>
+                                        <input type="text" value="Володченко" readonly>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Предыдущая фамилия (если была)</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Год рождения</label>
+                                        <input type="text" value="1987" readonly>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Место рождения</label>
+                                        <input type="text" value="Новокузнецк" readonly>
+                                    </div>
+                                </div>
+                                <h3>Постоянное место проживания в Германии</h3>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Улица</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="block form-wrap-2">
+                                        <div class="form-input item">
+                                            <label>Номер дома</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-input item">
+                                            <label>Индекс</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Город</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Телефон</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Были Вы рождены в СССР или России?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio1-1">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio1-1">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-calendar block">
+                                        <label>Дата эмиграции</label>
+                                        <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                        <i class="icon-calendar-2"></i>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Страна в которую Вы эмигрировали</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Было ли у Вас гражданство России или СССР?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio1-2">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio1-2">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-calendar block">
+                                        <label>Когда</label>
+                                        <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                        <i class="icon-calendar-2"></i>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Причина выхода из гражданства</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Есть ли у Вас родственники в России?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio1-3">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio1-3">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Имя</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Фамилия</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Степень родства</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Улица</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="block form-wrap-2">
+                                        <div class="form-input item">
+                                            <label>Номер дома</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-input item">
+                                            <label>Индекс</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Город</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Посещали ли Вы Россию раньше?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio1-4">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio1-4">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Сколько раз?</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="block">
+                                        <label>В какой период?</label>
+                                        <div class="range-calendar">
+                                            <div class="form-calendar">
+                                                <input type="text" class="from" name="from" placeholder="" readonly="readonly">
+                                                <i class="icon-calendar-2"></i>
+                                            </div>
+                                            <span>до</span>
+                                            <div class="form-calendar">
+                                                <input type="text" class="to" name="to" placeholder="" readonly="readonly">
+                                                <i class="icon-calendar-2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Вы работаете или учитесь?</h4>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio1-5">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio1-5">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-5">
+                                    <div class="form-input block">
+                                        <label>Название фирмы</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Адрес</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Должность</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Номер телефона</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <h4>Заявитель 2</h4>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Имя</label>
+                                        <input type="text" value="Татьяна" readonly>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Фамилия</label>
+                                        <input type="text" value="Володченко" readonly>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Предыдущая фамилия (если была)</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Год рождения</label>
+                                        <input type="text" value="1987" readonly>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Место рождения</label>
+                                        <input type="text" value="Новокузнецк" readonly>
+                                    </div>
+                                </div>
+                                <h3>Постоянное место проживания в Германии</h3>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Улица</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="block form-wrap-2">
+                                        <div class="form-input item">
+                                            <label>Номер дома</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-input item">
+                                            <label>Индекс</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Город</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Телефон</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Были Вы рождены в СССР или России?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio2-1">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio2-1">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-calendar block">
+                                        <label>Дата эмиграции</label>
+                                        <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                        <i class="icon-calendar-2"></i>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Страна в которую Вы эмигрировали</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Было ли у Вас гражданство России или СССР?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio2-2">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio2-2">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-calendar block">
+                                        <label>Когда</label>
+                                        <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                        <i class="icon-calendar-2"></i>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Причина выхода из гражданства</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Есть ли у Вас родственники в России?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio2-3">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio2-3">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Имя</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Фамилия</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Степень родства</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Улица</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="block form-wrap-2">
+                                        <div class="form-input item">
+                                            <label>Номер дома</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-input item">
+                                            <label>Индекс</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Город</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <h3>Посещали ли Вы Россию раньше?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio2-4">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio2-4">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-4">
+                                    <div class="form-input block">
+                                        <label>Сколько раз?</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="block">
+                                        <label>В какой период?</label>
+                                        <div class="range-calendar">
+                                            <div class="form-calendar">
+                                                <input type="text" class="from" name="from" placeholder="" readonly="readonly">
+                                                <i class="icon-calendar-2"></i>
+                                            </div>
+                                            <span>до</span>
+                                            <div class="form-calendar">
+                                                <input type="text" class="to" name="to" placeholder="" readonly="readonly">
+                                                <i class="icon-calendar-2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>Вы работаете или учитесь?</h3>
+                                <div class="radio-btns">
+                                    <label class="wrap">
+                                        <input type="radio" checked="checked" name="radio2-5">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Да</span>
+                                    </label>
+                                    <label class="wrap">
+                                        <input type="radio" name="radio2-5">
+                                        <span class="checkmark"></span>
+                                        <span class="label">Нет</span>
+                                    </label>
+                                </div>
+                                <div class="form-wrap-5">
+                                    <div class="form-input block">
+                                        <label>Название фирмы</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Адрес</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Должность</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input block">
+                                        <label>Номер телефона</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+
+                            <div class="formInfo__bottom">
+                                <div class="form-buttons">
+                                    <a href="javascript:void(0)" class="btn back" data-step="step__inner2_2">Вернуться</a>
+                                    <a href="javascript:void(0)" class="btn next" data-step="step__inner2_4">Продолжить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step step2 step__inner2_4">
+                        <div class="heading">
+                            <h3>Шаг 2 </h3>
+                            <div class="sub-text">
+                                <p>Заполнение анкеты </p>
+                                <span class="tooltip"><i class="icon-info-button"></i></span>
+                                <div class="tooltip__text">
+                                    <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- результаты после предыдущих шагов -->
+                        <div class="stepResults">
+                            <div class="table">
+                                <div class="row">
+                                    <div class="cell">
+                                        <div class="line">
+                                            <p>Страна: </p><span>Россия</span>
+                                        </div>
+                                        <div class="line">
+                                            <p>Вид визы: </p><span>туристическая</span>
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <div class="flex-wrap">
+                                            <div class="line">
+                                                <p>Въезд: </p><span>18.06.19 </span>
+                                            </div>
+                                            <div class="line">
+                                                <p>Выезд: </p><span>19.06.19 </span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <p>Время обработки: </p><span>3-4 рабочих дня консульства (Экспресс)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table">
+                                <div class="applicants-row">
+                                    <div class="applicant">
+                                        <div class="row row-heading">
+                                            <p>Заявитель 1</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell">
+                                                <div class="line">
+                                                    <p>Имя: </p><span>Татьяна</span>
+                                                </div>
+                                                <div class="line">
+                                                    <p>Фамилия: </p><span>Володченко</span>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="line">
+                                                    <p>Год рождения: </p><span>1987</span>
+                                                </div>
+                                                <div class="line">
+                                                    <p>Гражданство: </p><span>Российской Федерации</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="applicant">
+                                        <div class="row row-heading">
+                                            <p>Заявитель 2</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell">
+                                                <div class="line">
+                                                    <p>Имя: </p><span>Татьяна</span>
+                                                </div>
+                                                <div class="line">
+                                                    <p>Фамилия: </p><span>Володченко</span>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="line">
+                                                    <p>Год рождения: </p><span>1987</span>
+                                                </div>
+                                                <div class="line">
+                                                    <p>Гражданство: </p><span>Российской Федерации</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="applicant">
+                                        <div class="row row-heading">
+                                            <p>Заявитель 3</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="cell">
+                                                <div class="line">
+                                                    <p>Имя: </p><span>Татьяна</span>
+                                                </div>
+                                                <div class="line">
+                                                    <p>Фамилия: </p><span>Володченко</span>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="line">
+                                                    <p>Год рождения: </p><span>1987</span>
+                                                </div>
+                                                <div class="line">
+                                                    <p>Гражданство: </p><span>Российской Федерации</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="show-all">Все заявители</span>
+                                </div>
+                            </div>
+                            <div class="table">
+                                <div class="row flex-3">
+                                    <div class="cell">
+                                        <div class="line">
+                                            <p>Места для посещения: </p><span>Орел, Орел</span>
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <div class="line">
+                                            <p>В какую страну выезжаете из России: </p><span>Монголия</span>
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <div class="line">
+                                            <p>В какой город в этой стране: </p><span>Улан-Батор</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table">
+                                <div class="row">
+                                    <div class="cell">
+                                        <ul>
+                                            <li>Медицинская страховка</li>
+                                            <li>Курьерский сервис</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <div class="step__inner">
+                            <h3>Данные счета и адрес доставки</h3>
+                            <div class="form-wrap-4">
+                                <div class="form-input block">
+                                    <label>Фирма</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Имя</label>
+                                    <input type="text" value="Татьяна" readonly>
+                                </div>
+                                <div class="form-input block">
+                                    <label>Фамилия</label>
+                                    <input type="text" value="Володченко" readonly>
+                                </div>
+                                <div class="form-input block">
+                                    <label>Улица</label>
+                                    <input type="text">
+                                </div>
+                                <div class="block form-wrap-2">
+                                    <div class="form-input item">
+                                        <label>Номер дома</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input item">
+                                        <label>Индекс</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-input block">
+                                    <label>Город</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Страна</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Доп.информация для доставки (этаж, двор и т.п.)</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <h3>Паспорт/а с визой/визами мне прислать до:</h3>
+                            <div class="form-wrap-4">
+                                <div class="form-calendar block">
+                                    <label>Дата </label>
+                                    <input type="text" class="datepicker" placeholder="" readonly="readonly">
+                                    <i class="icon-calendar-2"></i>
+                                </div>
+                            </div>
+                            <h3>Способ доставки паспорта с визой:</h3>
+                            <div class="delivery_wrap">
+                                <ul>
+                                    <li>
+                                        <input id="value1" type="radio" checked="checked" name="delivery">
+                                        <label for="value1">Я заберу мои документы сам у вас в бюро: <strong>0,00€</strong></label>
+                                    </li>
+                                    <li>
+                                        <input id="value2" type="radio" name="delivery">
+                                        <label for="value2">Заказное письмо: <strong>4,90€</strong> + за паспорт <strong>0,99€</strong></label>
+                                    </li>
+                                    <li>
+                                        <input id="value3" type="radio" name="delivery">
+                                        <label for="value3">WERTNATIONAL: <strong>9,90€</strong> + за паспорт <strong>1,50€</strong></label>
+                                    </li>
+                                    <li>
+                                        <input id="value4" type="radio" name="delivery">
+                                        <label for="value4">ЭКСПРЕСС: доставка на следующий день: <strong>14,90€</strong> + за паспорт <strong>1,99€</strong></label>
+                                    </li>
+                                    <li>
+                                        <input id="value5" type="radio" name="delivery">
+                                        <label for="value5">ЭКСПРЕСС: доставка в субботу: <strong>25,90€</strong> + за паспорт <strong>1,99€</strong></label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="formInfo__bottom">
+                                <div class="form-buttons">
+                                    <a href="javascript:void(0)" class="btn back" data-step="step__inner2_3">Вернуться</a>
+                                    <a href="javascript:void(0)" class="btn next" data-step="step__inner3_1">Продолжить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step step3 step__inner3_1">
+                        <div class="heading">
+                            <h3>Шаг 3 </h3>
+                            <div class="sub-text">
+                                <p>Оплата визы </p>
+                                <span class="tooltip"><i class="icon-info-button"></i></span>
+                                <div class="tooltip__text">
+                                    <p>Здесь Вы сможете расчитать стоимость вашей визы</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step__inner orderWrap">
+                            <div class="title b-radius">
+                                <h3>Ваш заказ</h3>
+                            </div>
+                            <div class="body">
+                                <div class="flex-wrap-3">
+                                    <div class="item flex-wrap-2">
+                                        <div class="block">
+                                            <p>Страна: </p>
+                                            <span>Россия</span>
+                                        </div>
+                                        <div class="block">
+                                            <p>Вид визы: </p>
+                                            <span>туристическая</span>
+                                        </div>
+                                    </div>
+                                    <div class="item flex-wrap-2">
+                                        <div class="block">
+                                            <p>Въезд: </p>
+                                            <span>18.06.19 </span>
+                                        </div>
+                                        <div class="block">
+                                            <p>Выезд: </p>
+                                            <span>19.06.19 </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <p>Время обработки: </p>
+                                        <span>3-4 рабочих дня консульства (Экспресс) </span>
+                                        <ul>
+                                            <li>Доставка паспорта: 15.08.2019</li>
+                                            <li>Какой-то еще важный текст</li>
+                                            <li>Какой-то еще важный текст</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="applicants-row">
+                                    <div class="applicant">
+                                        <div class="row-heading">
+                                            <p>Заявитель 1</p>
+                                        </div>
+                                        <div class="flex-wrap-3">
+                                            <div class="item flex-wrap-2">
+                                                <div class="block">
+                                                    <p>Имя: </p><span>Татьяна</span>
+                                                </div>
+                                                <div class="block">
+                                                    <p>Фамилия: </p><span>Володченко</span>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="item">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="applicant">
+                                        <div class="row-heading">
+                                            <p>Заявитель 2</p>
+                                        </div>
+                                        <div class="flex-wrap-3">
+                                            <div class="item flex-wrap-2">
+                                                <div class="block">
+                                                    <p>Имя: </p><span>Татьяна</span>
+                                                </div>
+                                                <div class="block">
+                                                    <p>Фамилия: </p><span>Володченко</span>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="item">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="applicant">
+                                        <div class="row-heading">
+                                            <p>Заявитель 3</p>
+                                        </div>
+                                        <div class="flex-wrap-3">
+                                            <div class="item flex-wrap-2">
+                                                <div class="block">
+                                                    <p>Имя: </p><span>Татьяна</span>
+                                                </div>
+                                                <div class="block">
+                                                    <p>Фамилия: </p><span>Володченко</span>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <p>Год рождения: </p><span>1987</span>
+                                            </div>
+                                            <div class="item">
+                                                <p>Гражданство: </p><span>Российской Федерации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="show-all">Все заявители</span>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="flex-wrap-3">
+                                    <div class="item flex-wrap-2">
+                                        <div class="block">
+                                            <p>Места для посещения: </p>
+                                            <span>Орел, Орел</span>
+                                        </div>
+                                        <div class="block">
+                                            <p>В какую страну выезжаете из России: </p>
+                                            <span>Монголия</span>
+                                        </div>
+                                    </div>
+                                    <div class="item flex-wrap-2">
+                                        <div class="block">
+                                            <p>В какой город в этой стране: </p>
+                                            <span>Улан-Батор</span>
+                                        </div>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="flex-wrap-3">
+                                    <div class="item">
+                                        <p>Платежный адрес:</p>
+                                        <span>ул. Краснофлотская, 18</span>
+                                        <span>двор 5/3</span>
+                                        <span>87655, Москва</span>
+                                    </div>
+                                    <div class="item">
+                                        <p>Телефон:</p>
+                                        <span>+7847362522</span>
+                                    </div>
+                                    <div class="item">
+                                        <p>Email:</p>
+                                        <span>oksana777@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="flex-wrap-3">
+                                    <div class="item">
+                                        <p>Адрес доставки:</p>
+                                        <span>Фирма «Союз»</span>
+                                        <span>ул. Краснофлотская, 18</span>
+                                        <span>двор 5/3</span>
+                                        <span>87655, Москва</span>
+                                    </div>
+                                    <div class="item">
+                                        <p>Время доставки:</p>
+                                        <span>с 8.00 до 12.00</span>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h3>Стоимость</h3>
+                            </div>
+                            <div class="body">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            Виза (туристическая, однократный въезд, до 30 дней):
+                                        </th>
+                                        <td>35€</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Консульский сбор: </th>
+                                        <td>35€</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Сборы провайдера: </th>
+                                        <td>35€</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th>Помощь по заполнению анкеты:</th>
+                                        <td>35€</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Медицинская страховка:</th>
+                                        <td>35€</td>
+                                    </tr>
+                                    <tr>
+                                        <th><strong>Итого:</strong></th>
+                                        <td><strong>35€</strong></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="title">
+                                <h3>Способ оплаты</h3>
+                            </div>
+                            <div class="body payments">
+                                <ul>
+                                    <li>
+                                        <input id="payment_method_bacs" type="radio" name="payment_method" checked="checked">
+                                        <label for="payment_method_bacs"> Прямой банковский перевод </label>
+                                        <div>
+                                            <p>Оплату нужно направлять напрямую на наш банковский счет. Используйте идентификатор заказа в качестве кода платежа. Заказ будет отправлен после поступления средств на наш счет.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input id="payment_method_cheque" type="radio" name="payment_method">
+                                        <label for="payment_method_cheque"> Чековые платежи </label>
+                                        <div>
+                                            <p>Пожалуйста, отправьте ваш чек, указав данные магазина: название, улицу, город, область/регион, страну, почтовый индекс.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input id="payment_method_cod" type="radio" name="payment_method">
+                                        <label for="payment_method_cod"> Оплата при доставке </label>
+                                        <div>
+                                            <p>Оплата наличными при доставке заказа.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input id="payment_method_paypal" type="radio" name="payment_method">
+                                        <label for="payment_method_paypal">PayPal </label>
+                                        <div>
+                                            <p>Оплата через PayPal; вы сможете произвести оплату с помощью банковской карты, если у вас нет аккаунта в системе PayPal.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <div class="form-input comment">
+                                    <label>Комментарии к заказу:</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="formInfo__bottom">
+                                    <div class="form-checkbox">
+                                        <label class="wrap">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span> Я прочитал(а) <a href="javascript:void(0)">условия въезда в Российскую Федерацию</a>, а также документ <a href="javascript:void(0)">AGB</a> и документ <a href="javascript:void(0)">«Политика конфиденциальности и обработки персональных данных»</a>                                            и принимаю их.
+                                        </label>
+                                    </div>
+                                    <div class="form-buttons">
+                                        <a href="javascript:void(0)" class="btn back" data-step="step__inner2_4">Вернуться</a>
+                                        <button href="javascript:void(0)" class="btn confirm">Подтвердить заказ</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>

@@ -31,10 +31,6 @@ $(document).ready(function(){
         $(".addPlace", $(this)).click(function (e) {
             el++;
             $(con, $wrapper).clone(true).appendTo($wrapper).addClass('element' + el);
-            // $wrapper.addClass('class');
-             jcf.replace($('.element' + el).find('select'));
-
-            // $('.multi-place:first-child', $wrapper).clone(true).appendTo($wrapper);
         });
     });
 
@@ -78,10 +74,60 @@ $(document).ready(function(){
     });
 
     //переход между шагами
-    $('.form-buttons button').on('click', function(){
+    $('.form-buttons .btn').on('click', function(){
         $('.step').removeClass('active');
-        $('.' + $(this).attr('data-step')).addClass('active');
-    })
+        $('.' + $(this).attr('data-step')).addClass('active'); 
+
+        window.scrollTo(0, 40);
+        
+        if($('.step.active').hasClass('step1')){
+            $('.visa__top>.item').removeClass('active');
+            $('.visa__top>.item').eq(0).addClass('active');
+        }else if($('.step.active').hasClass('step2')){
+            $('.visa__top>.item').removeClass('active');
+            $('.visa__top>.item').eq(1).addClass('active');
+        }else{
+            $('.visa__top>.item').removeClass('active');
+            $('.visa__top>.item').eq(2).addClass('active');
+        }
+    });
+
+    // datepicker range
+    $( function() {
+        var dateFormat = "dd.mm.yy",
+          from = $( ".from" )
+            .datepicker({
+              defaultDate: "+1w",
+              changeMonth: true,
+              changeYear: true,
+              yearRange: "-100:+100",
+              dateFormat: "dd.mm.yy",
+            })
+            .on( "change", function() {
+              to.datepicker( "option", "minDate", getDate( this ) );
+            }),
+          to = $( ".to" ).datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+100",
+            dateFormat: "dd.mm.yy",
+          })
+          .on( "change", function() {
+            $(this).closest('.range-calendar').find(from).datepicker( "option", "maxDate", getDate( this ) );
+          });
+     
+        function getDate( element ) {
+          var date;
+          try {
+            date = $.datepicker.parseDate( dateFormat, element.value );
+          } catch( error ) {
+            date = null;
+          }
+     
+          return date;
+        }
+    });
 
 
 });
