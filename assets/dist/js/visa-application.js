@@ -5,7 +5,7 @@ $(document).ready(function(){
     var max_fields = 3;
     var num = 1;
     var content = $('.main-clone').clone().removeClass('main-clone');
-    // console.log(content.html());
+
     $('.applicants-wrap').each(function () {
         
         var $wrapper = $('.multi-fields', this);
@@ -63,14 +63,20 @@ $(document).ready(function(){
     });
 
     //show/hide accordion
-    $('.accordion-heading').on('click', function(){
-        $(this).parent().toggleClass('active');
+    $('.accordion-heading label').on('click', function(){
+        $(this).closest('.accordion').toggleClass('active');
     });
 
     //show all applicants
     $('.applicants-row .show-all').on('click', function(){
         $(this).hide();
         $(this).closest('.applicants-row').addClass('show');
+    });
+
+    //show docs
+    $('.showDocs').on('click', function(){
+        $(this).toggleClass('show');
+        $('.hiddenDocs').toggleClass('show');
     });
 
     //переход между шагами

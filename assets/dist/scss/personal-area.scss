@@ -138,6 +138,9 @@
                         color: #ffffff;
                         font-size: 12px;
                     }
+                    &:hover{
+                        background-color: #f76f0d;
+                    }
                 }
                 span{
                     opacity: 0.54;
@@ -254,6 +257,12 @@
             border: 1px solid #e2e4ef;
             padding: 0 15px;
             width: 100%;
+
+            -moz-appearance:textfield;
+            &::-webkit-inner-spin-button, 
+            &::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+            }
         }
         .form-input{
             margin-bottom: 20px;

@@ -724,12 +724,13 @@
 @media screen and (min-width: 1240px){
     .banner{
         margin-top: 72px;
+        overflow-x: hidden;
     }
     .search{
         &__form {
             .top__tabs {
                 .filter-items {
-                    padding: 0 24px 0 25px;
+                    padding: 0 24px 0 24px;
                     &:last-of-type{
                         padding: 0 26px 0 27px;
                     }
