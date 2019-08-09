@@ -19,6 +19,7 @@ $(document).ready(function(){
     $('.open-visas_instructions__popup').on("click",function(e){
         if($(window).width() > 1024) {
             e.preventDefault();
+            $('.overlay-contacts').removeClass('active');
             $('.overlay-visas_instructions').addClass('active');
         }
     });
@@ -29,6 +30,7 @@ $(document).ready(function(){
     $('.open-contacts__popup').on("click",function(e){
         if($(window).width() > 1024) {
             e.preventDefault();
+            $('.overlay-visas_instructions').removeClass('active');
             $('.overlay-contacts').addClass('active');
         }
     });
@@ -36,7 +38,10 @@ $(document).ready(function(){
         $('.overlay-contacts').removeClass('active');
     });
 
-
+    if($(window).width() > 1024) {
+        $('.open-visas_instructions__popup a').attr('href', 'javascript:void(0)');
+        $('.open-contacts__popup a').attr('href', 'javascript:void(0)');
+    }
 });
 
 

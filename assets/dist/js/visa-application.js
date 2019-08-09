@@ -13,8 +13,24 @@ $(document).ready(function(){
             if (num < max_fields) {
                 num++;
                 $(content, $wrapper).clone(true).appendTo($wrapper).addClass('clone' + num).find('.numApplicant').text(num);
-                // $wrapper.addClass('class');
-                 jcf.replace($('.clone' + num).find('select'));
+
+                jcf.replace($('.clone' + num).find('select'));
+                $( ".clone" + num ).find('.datepicker-year').datepicker({
+                    changeYear: true,
+                    dateFormat: 'yy',
+                    yearRange: "-100:+0",
+                    onClose: function(dateText, inst) { 
+                        var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                        $(this).datepicker('setDate', new Date(year, 1));
+                    }
+                });
+                $( ".clone" + num ).append('<div class="remove-field">X</div>');
+
+                $('.remove-field').on('click', function(){
+                    $(this).closest('.multi-field').remove();
+                    num--;
+                })
+
                 if(num == max_fields){
                     $('#addApplicant').hide();
                 }
