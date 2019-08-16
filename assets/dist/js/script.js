@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
     //end mobile menu
 
-    //popups
+    //открытие страницы или попапа в зависимости от размера экрана
     $('.open-visas_instructions__popup').on("click",function(e){
         if($(window).width() > 1024) {
             e.preventDefault();

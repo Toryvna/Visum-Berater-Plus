@@ -1374,7 +1374,7 @@
             .addressCoincide-blk{
                 display: none;
                 &.show{
-                    @include flexbox;
+                    display: block;
                 }
             }
             .showBlk{
