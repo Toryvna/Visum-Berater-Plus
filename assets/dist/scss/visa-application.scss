@@ -32,6 +32,8 @@
                     opacity: .7;
                     display: inline-block;
                     position: relative;
+                    width: 20px;
+                    text-align: center;
                     &::before{
                         content: '\e803';
                         font-family: 'fontello';
@@ -45,7 +47,7 @@
                         line-height: 17px;
                         display: none;
                         position: absolute;
-                        left: -4px;
+                        left: 1px;
                         top: -18px;
                         z-index: 1;
                     }
