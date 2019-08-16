@@ -100,18 +100,36 @@ $(document).ready(function(){
         $('.step').removeClass('active');
         $('.' + $(this).attr('data-step')).addClass('active'); 
 
-        window.scrollTo(0, 40);
-        
         if($('.step.active').hasClass('step1')){
             $('.visa__top>.item').removeClass('active');
             $('.visa__top>.item').eq(0).addClass('active');
         }else if($('.step.active').hasClass('step2')){
             $('.visa__top>.item').removeClass('active');
             $('.visa__top>.item').eq(1).addClass('active');
+            $('.visa__top>.item').eq(0).addClass('done');
         }else{
             $('.visa__top>.item').removeClass('active');
             $('.visa__top>.item').eq(2).addClass('active');
+            $('.visa__top>.item').eq(1).addClass('done');
         }
+
+        window.scrollTo(0, $('.step.active .step__inner').offset().top - 100);
+        
+        // $('.visa__top .item.done').on('click', function(){
+        //     $('.step').removeClass('active');
+        //     $('.' + $(this).attr('data-step')).addClass('active'); 
+    
+        //     $('.visa__top .item').removeClass('active');
+        //     $(this).addClass('active');
+        // });
+    });
+    $('body').on('click', '.visa__top .item.done', function() {
+        $('.step').removeClass('active');
+        $('.' + $(this).attr('data-step')).addClass('active'); 
+
+        $('.visa__top .item').removeClass('active');
+        $(this).addClass('active');
+        $(this).next().removeClass('done');
     });
 
     // datepicker range
@@ -150,6 +168,43 @@ $(document).ready(function(){
           return date;
         }
     });
+
+    //скрыть заявителя
+    $('.stepResults .applicant .row-heading').on('click', function(){
+        $(this).parent().toggleClass('hide');
+    });
+
+    //скрытие/открытие полей
+    $('.showBlk input[type="radio"]').click(function () {
+        if ($(this).attr("value") == "yes") {
+            $(this).closest('.showBlk').addClass('show');
+        }
+        if ($(this).attr("value") == "no") {
+            $(this).closest('.showBlk').removeClass('show');
+
+        }
+    });
+
+    $('.showBlk input[type="radio"]').trigger('click'); 
+
+    //сктрытие/открытие инфы для доставки
+    $('.addressCoincide input[type="checkbox"]').click(function () {
+        if( $(this).is(':checked')) {
+            $(".addressCoincide-blk").removeClass('show');
+        } else {
+            $(".addressCoincide-blk").addClass('show');
+        }
+    });
+
+    //показывать/скрывать блок, если предусмотрена доставка
+    $('.delivery_wrap input[type="radio"]').click(function () {
+        if ($(this).attr("value") == "without-delivery") {
+            $('.shippingIncluded').hide();
+        }else{
+            $('.shippingIncluded').show();
+        }
+    });
+
 
 
 });

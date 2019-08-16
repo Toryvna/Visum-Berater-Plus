@@ -19,26 +19,41 @@
 <section class="visa">
     <div class="container">
         <div class="visa__top">
-            <div class="item active">
-                <div class="item-icon">
-                    <span class="num">1</span>
-                    <i class="icon-1-stage"></i>
+            <div class="item active" data-step="step__inner1_1">
+                <div class="mob-content">
+                    <span>1</span>
                 </div>
-                <p> Расчет стоимости</p>
+                <div class="desk-content">
+                    <div class="item-icon">
+                        <span class="num">1</span>
+                        <i class="icon-1-stage"></i>
+                    </div>
+                    <p> Расчет стоимости</p>
+                </div>
             </div>
-            <div class="item">
-                <div class="item-icon">
-                    <span class="num">2</span>
-                    <i class="icon-2-stage"></i>
+            <div class="item" data-step="step__inner2_1">
+                <div class="mob-content">
+                    <span>2</span>
                 </div>
-                <p>Подготовка документов</p>
+                <div class="desk-content">
+                    <div class="item-icon">
+                        <span class="num">2</span>
+                        <i class="icon-2-stage"></i>
+                    </div>
+                    <p>Подготовка документов</p>
+                </div>
             </div>
-            <div class="item">
-                <div class="item-icon">
-                    <span class="num">3</span>
-                    <i class="icon-3-stage"></i>
+            <div class="item" data-step="step__inner3_1">
+                <div class="mob-content">
+                    <span>3</span>
                 </div>
-                <p>Оплата визы</p>
+                <div class="desk-content">
+                    <div class="item-icon">
+                        <span class="num">3</span>
+                        <i class="icon-3-stage"></i>
+                    </div>
+                    <p>Оплата визы</p>
+                </div>
             </div>
         </div>
 
@@ -958,6 +973,9 @@
                         </div>
                         <div class="table">
                             <div class="row">
+                                <h5>Вы выбрали следующие услуги:</h5>
+                            </div>
+                            <div class="row">
                                 <div class="cell">
                                     <ul>
                                         <li>Медицинская страховка</li>
@@ -1024,19 +1042,19 @@
                                 </div>
                             </div>
                             <h3>Были Вы рождены в СССР или России?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio1-1">
+                                    <input type="radio" name="radio1-1" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio1-1">
+                                    <input type="radio" checked="checked" name="radio1-1" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-calendar block">
                                     <label>Дата эмиграции</label>
                                     <input type="text" class="datepicker"  placeholder="" readonly="readonly">
@@ -1048,19 +1066,19 @@
                                 </div>
                             </div>
                             <h3>Было ли у Вас гражданство России или СССР?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio1-2">
+                                    <input type="radio" name="radio1-2" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio1-2">
+                                    <input type="radio" checked="checked" name="radio1-2" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-calendar block">
                                     <label>Когда</label>
                                     <input type="text" class="datepicker"  placeholder="" readonly="readonly">
@@ -1072,19 +1090,19 @@
                                 </div>
                             </div>
                             <h3>Есть ли у Вас родственники в России?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio1-3">
+                                    <input type="radio" name="radio1-3" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio1-3">
+                                    <input type="radio" checked="checked" name="radio1-3" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-input block">
                                     <label>Имя</label>
                                     <input type="text">
@@ -1117,19 +1135,19 @@
                                 </div>
                             </div>
                             <h3>Посещали ли Вы Россию раньше?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio1-4">
+                                    <input type="radio" name="radio1-4" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio1-4">
+                                    <input type="radio" checked="checked" name="radio1-4" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-input block">
                                     <label>Сколько раз?</label>
                                     <input type="text">
@@ -1150,19 +1168,19 @@
                                 </div>
                             </div>
                             <h4>Вы работаете или учитесь?</h4>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio1-5">
+                                    <input type="radio" name="radio1-5" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio1-5">
+                                    <input type="radio" checked="checked" name="radio1-5" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-5">
+                            <div class="form-wrap-5 hiddenBlk">
                                 <div class="form-input block">
                                     <label>Название фирмы</label>
                                     <input type="text">
@@ -1231,19 +1249,19 @@
                                 </div>
                             </div>
                             <h3>Были Вы рождены в СССР или России?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio2-1">
+                                    <input type="radio" name="radio2-1" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio2-1">
+                                    <input type="radio" checked="checked" name="radio2-1" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-calendar block">
                                     <label>Дата эмиграции</label>
                                     <input type="text" class="datepicker"  placeholder="" readonly="readonly">
@@ -1255,19 +1273,19 @@
                                 </div>
                             </div>
                             <h3>Было ли у Вас гражданство России или СССР?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio2-2">
+                                    <input type="radio" name="radio2-2" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio2-2">
+                                    <input type="radio" checked="checked" name="radio2-2" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-calendar block">
                                     <label>Когда</label>
                                     <input type="text" class="datepicker"  placeholder="" readonly="readonly">
@@ -1279,19 +1297,19 @@
                                 </div>
                             </div>
                             <h3>Есть ли у Вас родственники в России?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio2-3">
+                                    <input type="radio" name="radio2-3" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio2-3">
+                                    <input type="radio" checked="checked" name="radio2-3" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-input block">
                                     <label>Имя</label>
                                     <input type="text">
@@ -1324,19 +1342,19 @@
                                 </div>
                             </div>
                             <h3>Посещали ли Вы Россию раньше?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio2-4">
+                                    <input type="radio" name="radio2-4" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio2-4">
+                                    <input type="radio" checked="checked" name="radio2-4" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-4">
+                            <div class="form-wrap-4 hiddenBlk">
                                 <div class="form-input block">
                                     <label>Сколько раз?</label>
                                     <input type="text">
@@ -1357,19 +1375,19 @@
                                 </div>
                             </div>
                             <h3>Вы работаете или учитесь?</h3>
-                            <div class="radio-btns">
+                            <div class="radio-btns showBlk">
                                 <label class="wrap">
-                                    <input type="radio" checked="checked" name="radio2-5">
+                                    <input type="radio" name="radio2-5" value="yes">
                                     <span class="checkmark"></span>
                                     <span class="label">Да</span>
                                 </label>
                                 <label class="wrap">
-                                    <input type="radio" name="radio2-5">
+                                    <input type="radio" checked="checked" name="radio2-5" value="no">
                                     <span class="checkmark"></span>
                                     <span class="label">Нет</span>
                                 </label>
                             </div>
-                            <div class="form-wrap-5">
+                            <div class="form-wrap-5 hiddenBlk">
                                 <div class="form-input block">
                                     <label>Название фирмы</label>
                                     <input type="text">
@@ -1533,6 +1551,9 @@
                         </div>
                         <div class="table">
                             <div class="row">
+                                <h5>Вы выбрали следующие услуги:</h5>
+                            </div>
+                            <div class="row">
                                 <div class="cell">
                                     <ul>
                                         <li>Медицинская страховка</li>
@@ -1545,88 +1566,147 @@
                     <!--  -->
 
                     <div class="step__inner">
-                        <h3>Данные счета и адрес доставки</h3>
-                        <div class="form-wrap-4">
-                            <div class="form-input block">
-                                <label>Фирма</label>
-                                <input type="text">
-                            </div>
-                            <div class="form-input block">
-                                <label>Имя</label>
-                                <input type="text" value="Татьяна" readonly>
-                            </div>
-                            <div class="form-input block">
-                                <label>Фамилия</label>
-                                <input type="text" value="Володченко" readonly>
-                            </div>
-                            <div class="form-input block">
-                                <label>Email</label>
-                                <input type="email">
-                            </div>
-                            <div class="form-input block">
-                                <label>Телефон</label>
-                                <input type="number">
-                            </div>
-                            <div class="block"></div>
-                            <div class="form-input block">
-                                <label>Улица</label>
-                                <input type="text">
-                            </div>
-                            <div class="block form-wrap-2">
-                                <div class="form-input item">
-                                    <label>Номер дома</label>
-                                    <input type="text">
-                                </div>
-                                <div class="form-input item">
-                                    <label>Индекс</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="form-input block">
-                                <label>Город</label>
-                                <input type="text">
-                            </div>
-                            <div class="form-input block">
-                                <label>Страна</label>
-                                <input type="text">
-                            </div>
-                            <div class="form-input block">
-                                <label>Доп.информация для доставки (этаж, двор и т.п.)</label>
-                                <input type="text">
-                            </div>
-                        </div>
-                        <h3>Паспорт/а с визой/визами мне прислать до:</h3>
-                        <div class="form-wrap-4">
-                            <div class="form-calendar block">
-                                <label>Дата </label>
-                                <input type="text" class="datepicker"  placeholder="" readonly="readonly">
-                                <i class="icon-calendar-2"></i>
-                            </div>
-                        </div>
                         <h3>Способ доставки паспорта с визой:</h3>
                         <div class="delivery_wrap">
                             <ul>
                                 <li>
-                                    <input id="value1" type="radio" checked="checked" name="delivery">
+                                    <input id="value1" type="radio"  name="delivery" value="without-delivery">
                                     <label for="value1">Я заберу мои документы сам у вас в бюро: <strong>0,00€</strong></label>
                                 </li>
                                 <li>
-                                    <input id="value2" type="radio" name="delivery">
+                                    <input id="value2" type="radio" name="delivery" value="">
                                     <label for="value2">Заказное письмо: <strong>4,90€</strong> + за паспорт <strong>0,99€</strong></label>
                                 </li>
                                 <li>
-                                    <input id="value3" type="radio" name="delivery">
+                                    <input id="value3" type="radio"checked="checked" name="delivery" value="">
                                     <label for="value3">WERTNATIONAL: <strong>9,90€</strong> + за паспорт <strong>1,50€</strong></label>
                                 </li>
                                 <li>
-                                    <input id="value4" type="radio" name="delivery">
+                                    <input id="value4" type="radio" name="delivery" value="">
                                     <label for="value4">ЭКСПРЕСС: доставка на следующий день: <strong>14,90€</strong> + за паспорт <strong>1,99€</strong></label>
                                 </li>
                                 <li>
-                                    <input id="value5" type="radio" name="delivery">
+                                    <input id="value5" type="radio" name="delivery" value="">
                                     <label for="value5">ЭКСПРЕСС: доставка в субботу: <strong>25,90€</strong> + за паспорт <strong>1,99€</strong></label>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="shippingIncluded">
+                            <h3>Данные счета и адрес доставки совпадают
+                                <label class="addressCoincide">
+                                    <input type="checkbox" checked="checked" value="coincide">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </h3>
+                            <div class="form-wrap-4">
+                                <div class="form-input block">
+                                    <label>Фирма</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Имя</label>
+                                    <input type="text" value="Татьяна">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Фамилия</label>
+                                    <input type="text" value="Володченко">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Email</label>
+                                    <input type="email">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Телефон</label>
+                                    <input type="number">
+                                </div>
+                                <div class="block"></div>
+                                <div class="form-input block">
+                                    <label>Улица</label>
+                                    <input type="text">
+                                </div>
+                                <div class="block form-wrap-2">
+                                    <div class="form-input item">
+                                        <label>Номер дома</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input item">
+                                        <label>Индекс</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-input block">
+                                    <label>Город</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Страна</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Доп.информация для доставки (этаж, двор и т.п.)</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="form-wrap-4 addressCoincide-blk">
+                                <div class="block-full">
+                                    <h3>Адрес доставки:</h3>
+                                </div>
+                                <div class="form-input block">
+                                    <label>Фирма</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Имя</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Фамилия</label>
+                                    <input type="text" value="Володченко">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Email</label>
+                                    <input type="email">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Телефон</label>
+                                    <input type="number">
+                                </div>
+                                <div class="block"></div>
+                                <div class="form-input block">
+                                    <label>Улица</label>
+                                    <input type="text">
+                                </div>
+                                <div class="block form-wrap-2">
+                                    <div class="form-input item">
+                                        <label>Номер дома</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="form-input item">
+                                        <label>Индекс</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-input block">
+                                    <label>Город</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Страна</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-input block">
+                                    <label>Доп.информация для доставки (этаж, двор и т.п.)</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <h3>Паспорт/а с визой/визами мне прислать до:</h3>
+                            <div class="form-wrap-4">
+                                <div class="form-calendar block">
+                                    <label>Дата </label>
+                                    <input type="text" class="datepicker"  placeholder="" readonly="readonly">
+                                    <i class="icon-calendar-2"></i>
+                                </div>
+                            </div>
                         </div>
                         
                         <div class="formInfo__bottom">
