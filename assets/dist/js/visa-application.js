@@ -165,6 +165,9 @@ $(document).ready(function(){
     $('.stepResults .applicant .row-heading').on('click', function(){
         $(this).parent().toggleClass('hide');
     });
+    $('.orderWrap .applicant .row-heading').on('click', function(){
+        $(this).parent().toggleClass('hide');
+    });
 
     //скрытие/открытие полей
     $('.showBlk input[type="radio"]').click(function () {
