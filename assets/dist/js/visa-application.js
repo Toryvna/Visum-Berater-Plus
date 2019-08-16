@@ -114,14 +114,6 @@ $(document).ready(function(){
         }
 
         window.scrollTo(0, $('.step.active .step__inner').offset().top - 100);
-        
-        // $('.visa__top .item.done').on('click', function(){
-        //     $('.step').removeClass('active');
-        //     $('.' + $(this).attr('data-step')).addClass('active'); 
-    
-        //     $('.visa__top .item').removeClass('active');
-        //     $(this).addClass('active');
-        // });
     });
     $('body').on('click', '.visa__top .item.done', function() {
         $('.step').removeClass('active');
